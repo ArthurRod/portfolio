@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+$color-white: #FFF;
+$color-gray: #F5F0F9;
+$color-ultra-violet: #654597;
+$color-black: #000;
+
+$media-mobile-sm: 320px;
+$media-mobile-m: 375px;
+$media-mobile-l: 425px;
+$media-tablet: 768px;
+$media-desktop-xs: 1024px;
+$media-desktop-sm: 1280px;
+$media-desktop: 1300px;
+
+@mixin font-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+@mixin font-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+@mixin font-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}

@@ -1,0 +1,12 @@
+.carousel {
+  .items {
+    display: flex;
+    transition: transform ease-out 0.5s;
+    overflow-x: auto;
+    width: 100%;
+
+    .item {
+      flex: none;
+    }
+  }
+}
