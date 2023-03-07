@@ -1,0 +1,29 @@
+{
+  "name": "Arthur Rodrigues",
+  "skills": [
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "HTML"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "REACT"
+    },
+    {
+      "name": "Typescript"
+    },
+    {
+      "name": "Tailwind"
+    },
+    {
+      "name": "SCSS"
+    },
+    {
+      "name": "JAVA"
+    }
+  ]
+}
