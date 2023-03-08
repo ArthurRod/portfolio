@@ -1,5 +1,6 @@
 @use "./config";
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body {
   font-size: 16px;
   width: 100vw;
   height: 100vh;
+  background-color: config.$color-gray;
 }
 
 .container {
@@ -20,5 +22,16 @@ body {
 
   @media screen and (min-width: config.$media-desktop) {
     max-width: 1270px;
+  }
+}
+
+/* GLOBAL CLASSES */
+.section-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  h2 {
+    color: config.$color-ultra-violet;
   }
 }

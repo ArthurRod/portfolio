@@ -1,0 +1,23 @@
+@use "./config";
+
+@use "./_global-carousel.scss";
+
+.skills-carousel {
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  .swiper-wrapper {
+    padding-bottom: 30px;
+
+    .swiper-slide {
+      &:hover {
+        .card {
+          .skill-name {
+            opacity: 1;
+            bottom: calc(50% - 30px);
+          }
+        }
+      }
+    }
+  }
+}

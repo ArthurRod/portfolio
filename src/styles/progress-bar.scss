@@ -1,0 +1,30 @@
+@use "./config";
+
+.progress-bar-wrapper {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid config.$color-green;
+
+  .progress-bar {
+    position: relative;
+    height: 15px;
+    border-radius: 10px;
+    background-color: config.$color-green;
+
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -10px;
+      right: 0;
+      @include config.font-title;
+      font-size: 10px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      color: config.$color-white;
+      background-color: config.$color-green;
+    }
+  }
+}
