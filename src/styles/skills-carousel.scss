@@ -3,8 +3,9 @@
 @use "./_global-carousel.scss";
 
 .skills-carousel {
+  height: 100vh;
   padding-top: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 
   .swiper-wrapper {
     padding-bottom: 30px;

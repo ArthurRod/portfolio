@@ -1,21 +1,35 @@
 @use "./config";
 
-.swiper-pagination.swiper-pagination-bullets {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: 30px;
-  bottom: 0;
+.swiper {
+  .swiper-pagination.swiper-pagination-bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    border: 1px solid config.$color-ultra-violet;
-    background-color: config.$color-white;
+    &.swiper-pagination-horizontal {
+      height: 30px;
+      bottom: 0;
+    }
 
-    &.swiper-pagination-bullet-active {
-      background: config.$color-ultra-violet;
+    &.swiper-pagination-vertical {
+      flex-direction: column;
+      top: 50vh;
+      right: 50px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid config.$color-ultra-violet;
+      background-color: config.$color-white;
+      transition: transform 0.3s;
+
+      &:hover,
+      &.swiper-pagination-bullet-active {
+        background: config.$color-ultra-violet;
+        transform: scale(1.5);
+      }
     }
   }
 }
