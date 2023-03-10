@@ -1,9 +1,10 @@
 @use "./config";
 
-@use "./_global-carousel.scss";
+@use "./global-carousel";
 
-.skills-carousel {
-  height: 100vh;
+@use "./skill-card";
+
+.skills {
   padding-top: 30px;
   padding-bottom: 30px;
 

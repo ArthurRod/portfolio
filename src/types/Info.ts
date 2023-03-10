@@ -1,6 +1,7 @@
+import { ResumeType } from "./ResumeType";
 import { Skill } from "./Skill";
 
 export type Info = {
-  name: string;
+  resume: ResumeType;
   skills: Skill[];
 };

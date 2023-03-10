@@ -6,31 +6,33 @@ import { SkillCard } from "../SkillCard";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "../../styles/skills-carousel.scss";
+import "../../styles/skills.scss";
 
-interface SkillsCarouselProps {
+interface SkillsProps {
   skills: Skill[];
 }
 
-export function SkillsCarousel({ skills }: SkillsCarouselProps) {
+export function Skills({ skills }: SkillsProps) {
   return (
-    <section className="skills-carousel" aria-label="Seção Habilidades">
+    <section id="skills" className="skills" aria-label="Seção Habilidades">
       <div className="container">
         <div className="section-title">
-          <h2>Habilidades</h2>
+          <h2 data-animate="bottom">Habilidades</h2>
         </div>
         <Swiper
           slidesPerView={5}
-          slidesPerGroup={2}
+          slidesPerGroup={3}
           spaceBetween={30}
           grabCursor={true}
           loop={true}
+          speed={1000}
           pagination={{ clickable: true }}
           modules={[Autoplay, Pagination]}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
+          data-animate="right"
         >
           {skills.map((skill: Skill, i: number) => {
             const { image, name, percentage } = skill;

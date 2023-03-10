@@ -1,7 +1,5 @@
 import { ProgressBar } from "../ProgressBar";
 
-import "../../styles/skill-card.scss";
-
 interface SkillCardProps {
   skillImage: string;
   skillName: string;
@@ -14,7 +12,7 @@ export function SkillCard({
   skillPercentage,
 }: SkillCardProps) {
   return (
-    <div className="card">
+    <div className="skill-card">
       <div className="skill-image" role="img" aria-label="Imagem da tecnologia">
         <img src={skillImage} alt={skillName} loading="lazy" />
       </div>

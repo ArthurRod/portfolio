@@ -1,5 +1,9 @@
 {
-  "name": "Arthur Rodrigues",
+  "resume": {
+    "name": "Arthur Rodrigues",
+    "position": "Front-End Web Developer",
+    "resumeDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis velit vel rhoncus cursus. Pellentesque ornare magna sapien, at efficitur turpis congue at. Duis et metus et odio ullamcorper finibus. Aliquam convallis euismod magna sed consequat. Nunc sed consectetur augue. Donec ac mauris et sapien mollis suscipit. Donec tempor non mauris non pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce condimentum libero varius, hendrerit lacus quis, feugiat justo. Donec molestie dui at diam elementum rutrum. Duis vel est vitae lectus accumsan ultricies. Praesent vulputate, mi nec mollis porttitor, tortor diam aliquam purus, vel pharetra tortor sapien eget turpis. Quisque ultricies dui orci, quis scelerisque ex porttitor sodales. Aliquam eu lacinia lacus, luctus malesuada ipsum. Pellentesque maximus auctor leo, sit amet tincidunt leo rhoncus a. Aliquam erat volutpat."
+  },
   "skills": [
     {
       "image": "./src/assets/png/react.png",
