@@ -6,7 +6,7 @@ interface ProgressBarProps {
 
 export function ProgressBar({ percentage }: ProgressBarProps) {
   return (
-    <div className="progress-bar-wrapper">
+    <div className="progress-bar-wrapper" aria-label="Barra de Progresso">
       <div
         className="progress-bar"
         role="progressbar"

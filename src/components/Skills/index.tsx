@@ -16,7 +16,10 @@ export function Skills({ skills }: SkillsProps) {
   return (
     <section id="skills" className="skills" aria-label="Seção Habilidades">
       <div className="container">
-        <div className="section-title">
+        <div
+          className="section-title"
+          aria-label="Título da Seção de Habilidades"
+        >
           <h2 data-animate="bottom">Habilidades</h2>
         </div>
         <Swiper
