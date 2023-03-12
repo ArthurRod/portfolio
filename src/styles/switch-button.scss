@@ -1,0 +1,33 @@
+@use "./config";
+
+.switch-button {
+  height: 25px;
+  width: 50px;
+  border-radius: 20px;
+  border: none;
+  background-color: config.$color-ultra-violet;
+  opacity: 0.5;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+
+  &[data-state="checked"] {
+    opacity: 1;
+
+    span {
+      left: calc(100% - 22.5px);
+    }
+  }
+
+  span {
+    display: flex;
+    background-color: config.$color-white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    transition: all ease-in-out 0.3s;
+  }
+}

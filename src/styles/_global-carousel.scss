@@ -21,7 +21,8 @@
 
       &:hover,
       &.swiper-pagination-bullet-active {
-        background: config.$color-ultra-violet;
+        background-color: config.$color-gray;
+        //background: config.$color-ultra-violet;
         transform: scale(1.5);
       }
     }

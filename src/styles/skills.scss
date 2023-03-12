@@ -7,6 +7,10 @@
 .skills {
   padding-top: 30px;
   padding-bottom: 30px;
+  border-radius: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 
   .swiper-wrapper {
     padding-bottom: 30px;

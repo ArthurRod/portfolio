@@ -3,4 +3,66 @@
 .resume {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  .content {
+    display: flex;
+    gap: 30px;
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 210px;
+      height: 210px;
+
+      img {
+        width: 165px;
+      }
+    }
+
+    .infos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
+    }
+  }
+}
+
+.landing-page {
+  &.synthwavemode {
+    .resume {
+      position: relative;
+
+      .content {
+        width: 700px;
+        position: absolute;
+        left: calc(50% - 350px);
+        top: calc(50% - 110px);
+
+        .image {
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: transparent;
+          backdrop-filter: blur(5px);
+          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+
+          img {
+            width: 165px;
+          }
+        }
+
+        .infos {
+          width: calc(100% - 210px);
+          height: 210px;
+          overflow: hidden;
+          border-radius: 20px;
+          background-color: transparent;
+          backdrop-filter: blur(5px);
+          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+        }
+      }
+    }
+  }
 }

@@ -14,13 +14,18 @@ interface SkillsProps {
 
 export function Skills({ skills }: SkillsProps) {
   return (
-    <section id="skills" className="skills" aria-label="Seção Habilidades">
+    <section
+      id="skills"
+      className="skills"
+      aria-label="Seção Habilidades"
+      data-animate="bottom"
+    >
       <div className="container">
         <div
           className="section-title"
           aria-label="Título da Seção de Habilidades"
         >
-          <h2 data-animate="bottom">Habilidades</h2>
+          <h2>Habilidades</h2>
         </div>
         <Swiper
           slidesPerView={5}
@@ -35,7 +40,6 @@ export function Skills({ skills }: SkillsProps) {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          data-animate="right"
         >
           {skills.map((skill: Skill, i: number) => {
             const { image, name, percentage } = skill;
