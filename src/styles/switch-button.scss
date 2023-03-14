@@ -6,14 +6,11 @@
   border-radius: 20px;
   border: none;
   background-color: config.$color-ultra-violet;
-  opacity: 0.5;
   position: relative;
   transition: all ease-in-out 0.3s;
   cursor: pointer;
 
   &[data-state="checked"] {
-    opacity: 1;
-
     span {
       left: calc(100% - 22.5px);
     }
@@ -29,5 +26,13 @@
     top: 2.5px;
     left: 2.5px;
     transition: all ease-in-out 0.3s;
+  }
+}
+
+.landing-page {
+  &.synthwavemode {
+    .switch-button {
+      background-color: config.$color-bg-dark-theme;
+    }
   }
 }

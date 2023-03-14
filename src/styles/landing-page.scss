@@ -9,21 +9,16 @@
     margin-bottom: 30px;
 
     h2 {
-      color: config.$color-ultra-violet;
+      color: config.$color-bg-dark-theme;
     }
   }
 
   &.synthwavemode {
-    background-color: #1d0831;
-    background-image: url("../assets/jpg/sunset-city.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: config.$color-white;
+    color: config.$color-gray;
 
     .section-title {
       h2 {
-        color: config.$color-white;
+        color: config.$color-gray;
       }
     }
   }

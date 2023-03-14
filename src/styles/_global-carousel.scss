@@ -16,14 +16,28 @@
       width: 10px;
       height: 10px;
       border: 1px solid config.$color-ultra-violet;
-      background-color: config.$color-white;
+      background-color: config.$color-gray;
       transition: transform 0.3s;
 
       &:hover,
       &.swiper-pagination-bullet-active {
-        background-color: config.$color-gray;
-        //background: config.$color-ultra-violet;
+        background: config.$color-ultra-violet;
         transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.landing-page {
+  &.synthwavemode {
+    .swiper {
+      .swiper-pagination.swiper-pagination-bullets {
+        .swiper-pagination-bullet {
+          &:hover,
+          &.swiper-pagination-bullet-active {
+            background-color: config.$color-gray;
+          }
+        }
       }
     }
   }

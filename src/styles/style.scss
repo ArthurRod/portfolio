@@ -20,13 +20,10 @@ body {
   background-color: config.$color-gray;
 }
 
-section {
-  height: 100vh;
-}
-
 .container {
   margin: 0px auto;
   max-width: 100%;
+  padding-left: 130px;
 
   @media screen and (min-width: config.$media-desktop) {
     max-width: 1270px;

@@ -5,11 +5,10 @@
 @use "./skill-card";
 
 .skills {
+  margin-top: 100vh;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-radius: 20px;
-  background-color: transparent;
-  backdrop-filter: blur(8px);
+  background-color: config.$color-gray;
   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 
   .swiper-wrapper {
@@ -24,6 +23,15 @@
           }
         }
       }
+    }
+  }
+}
+
+.landing-page {
+  &.synthwavemode {
+    .skills {
+      background-color: config.$color-bg-dark-theme;
+      backdrop-filter: blur(8px);
     }
   }
 }

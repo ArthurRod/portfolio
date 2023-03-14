@@ -4,6 +4,12 @@ $color-white: #fff;
 $color-gray: #f5f0f9;
 $color-green: #4cbb17;
 $color-ultra-violet: #654597;
+$color-bg-theme: linear-gradient(
+  -45deg,
+  rgba(29, 8, 49, 1) 0%,
+  rgba(101, 69, 151, 1) 60%
+);
+$color-bg-dark-theme: #1d0831;
 $color-black: #09090a;
 
 $media-mobile-sm: 320px;

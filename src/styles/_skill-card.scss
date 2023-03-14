@@ -14,6 +14,11 @@
 
   &:hover {
     transform: scale(1.05);
+
+    .skill-name {
+      opacity: 1;
+      bottom: calc(50% - 30px);
+    }
   }
 
   .skill-image img {
@@ -23,7 +28,10 @@
   .skill-name {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     width: calc(100% - 30px);
+    height: 60px;
     padding: 15px;
     background-color: config.$color-ultra-violet;
     border-radius: 10px;
@@ -43,6 +51,31 @@
 
     span {
       font-size: 14px;
+      color: config.$color-bg-dark-theme;
+    }
+  }
+}
+
+.landing-page {
+  &.synthwavemode {
+    .skill-card {
+      background-color: config.$color-gray;
+      border: 1px solid config.$color-ultra-violet;
+
+      .skill-name {
+        background-color: config.$color-gray;
+        border: 1px solid config.$color-ultra-violet;
+
+        h4 {
+          color: config.$color-ultra-violet;
+        }
+      }
+
+      .progress-title {
+        span {
+          color: config.$color-ultra-violet;
+        }
+      }
     }
   }
 }

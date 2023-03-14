@@ -1,22 +1,43 @@
 @use "./config";
 
 .resume {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  color: config.$color-gray;
+  background: config.$color-bg-theme;
 
-  .content {
+  .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
+    max-width: 1100px;
 
     .image {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 210px;
-      height: 210px;
+      width: 290px;
+      height: 290px;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+      background-color: config.$color-ultra-violet;
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
 
       img {
-        width: 165px;
+        width: 225px;
       }
     }
 
@@ -24,8 +45,38 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 10px;
+      gap: 30px;
       padding: 15px;
+      width: calc(100% - 290px);
+      min-height: 200px;
+      transition: all ease-in-out 0.3s;
+
+      .name-position {
+        .name,
+        .position {
+          h2 {
+            font-size: 24px;
+          }
+
+          h1 {
+            font-size: 32px;
+          }
+        }
+      }
+
+      .resume-description {
+        &:hover {
+          p {
+            height: 120px;
+          }
+        }
+
+        p {
+          height: 60px;
+          overflow: hidden;
+          transition: height ease-in-out 0.3s;
+        }
+      }
     }
   }
 }
@@ -33,34 +84,23 @@
 .landing-page {
   &.synthwavemode {
     .resume {
-      position: relative;
+      background-image: url("../assets/jpg/sunset-city.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
 
-      .content {
-        width: 700px;
-        position: absolute;
-        left: calc(50% - 350px);
-        top: calc(50% - 110px);
-
+      .container {
         .image {
-          overflow: hidden;
-          border-radius: 50%;
           background-color: transparent;
           backdrop-filter: blur(5px);
-          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-
-          img {
-            width: 165px;
-          }
         }
 
         .infos {
-          width: calc(100% - 210px);
-          height: 210px;
-          overflow: hidden;
           border-radius: 20px;
+          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+          background-color: config.$color-ultra-violet;
           background-color: transparent;
           backdrop-filter: blur(5px);
-          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
         }
       }
     }
