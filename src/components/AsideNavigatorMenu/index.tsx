@@ -1,4 +1,6 @@
+import { Code, House } from "phosphor-react";
 import { SwitchButton } from "../../components/SwitchButton";
+import { scrollPage } from "../../helpers/scrollPage";
 
 import "../../styles/aside-navigator-menu.scss";
 
@@ -30,8 +32,25 @@ export function AsideNavigatorMenu({
       </div>
       <nav>
         <ul>
-          <li>
-            <a href="#skills">Habilidades</a>
+          <li aria-label="Menu resumo">
+            <a href="#resume" onClick={() => scrollPage("resume")}>
+              <House size={32} />
+              <div className="menu-name" aria-label="Nome do menu">
+                <div className="content">
+                  <span>Resumo</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li aria-label="Menu habilidades">
+            <a href="#skills" onClick={() => scrollPage("skills")}>
+              <Code size={32} />
+              <div className="menu-name" aria-label="Nome do menu">
+                <div className="content">
+                  <span>Habilidades</span>
+                </div>
+              </div>
+            </a>
           </li>
         </ul>
       </nav>
