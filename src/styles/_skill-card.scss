@@ -6,11 +6,12 @@
   gap: 10px;
   position: relative;
   padding: 15px;
-  border: 1px solid config.$color-ultra-violet;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
   margin: 10px;
-  transition: 0.3s;
+  border-radius: 20px;
+  border: 1px solid config.$color-dark-base;
+  background-color: config.$color-light-gray;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  transition: all ease-in-out 0.3s;
 
   &:hover {
     transform: scale(1.05);
@@ -30,19 +31,19 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: calc(100% - 30px);
-    height: 60px;
-    padding: 15px;
-    background-color: config.$color-ultra-violet;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgb(101 69 151 / 40%);
     position: absolute;
     opacity: 0;
     bottom: 0;
-    transition: 0.3s;
+    width: calc(100% - 30px);
+    height: 60px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: config.$color-base;
+    box-shadow: 0 0 20px rgb(101 69 151 / 40%);
+    transition: all ease-in-out 0.3s;
 
     h4 {
-      color: config.$color-white;
+      color: config.$color-blue-base;
     }
   }
 
@@ -51,29 +52,30 @@
 
     span {
       font-size: 14px;
-      color: config.$color-bg-dark-theme;
+      color: config.$color-dark-base;
     }
   }
 }
 
+/* Dark Mode */
 .landing-page {
-  &.synthwavemode {
+  &.dark-mode {
     .skill-card {
       background-color: config.$color-gray;
-      border: 1px solid config.$color-ultra-violet;
+      border: 1px solid config.$color-base;
 
       .skill-name {
         background-color: config.$color-gray;
-        border: 1px solid config.$color-ultra-violet;
+        border: 1px solid config.$color-base;
 
         h4 {
-          color: config.$color-ultra-violet;
+          color: config.$color-base;
         }
       }
 
       .progress-title {
         span {
-          color: config.$color-ultra-violet;
+          color: config.$color-base;
         }
       }
     }

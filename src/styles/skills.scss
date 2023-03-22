@@ -5,15 +5,17 @@
 @use "./skill-card";
 
 .skills {
-  margin-top: 100vh;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: config.$color-gray;
-  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  background-color: config.$color-light-gray;
+
+  /* Tablet */
+  @media screen and (min-width: config.$media-tablet) {
+    margin-top: 100vh;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  }
 
   .swiper-wrapper {
-    padding-bottom: 30px;
-
     .swiper-slide {
       &:hover {
         .card {
@@ -27,10 +29,11 @@
   }
 }
 
+/* Dark Mode */
 .landing-page {
-  &.synthwavemode {
+  &.dark-mode {
     .skills {
-      background-color: config.$color-bg-dark-theme;
+      background-color: config.$color-base-dark-theme;
       backdrop-filter: blur(8px);
     }
   }

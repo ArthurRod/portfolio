@@ -1,20 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 $color-white: #fff;
-$color-gray: #f5f0f9;
-$color-green: #4cbb17;
-$color-ultra-violet: #654597;
-$color-bg-theme: linear-gradient(
-  -45deg,
-  rgba(29, 8, 49, 1) 0%,
-  rgba(101, 69, 151, 1) 60%
+$color-black: #000;
+$color-gray: #a6a6a6;
+$color-light-gray: #f5f5f5;
+$color-success: #4cbb17;
+$color-gradient: linear-gradient(
+  150deg,
+  rgba(245, 245, 245, 1) 50%,
+  rgba(0, 191, 255, 1) 100%
 );
-$color-bg-dark-theme: #1d0831;
-$color-black: #09090a;
+
+/* Default colors */
+$color-base: #654597;
+$color-dark-base: #462f63;
+$color-light-base: #8c5aa5;
+$color-blue-base: #00bfff;
+$color-yellow-base: #ffd700;
+/* Dark theme colors */
+$color-base-dark-theme: #1d0831;
 
 $media-mobile-sm: 320px;
 $media-mobile-m: 375px;
-$media-mobile-l: 425px;
+$media-mobile-l: 410px;
 $media-tablet: 768px;
 $media-desktop-xs: 1024px;
 $media-desktop-sm: 1280px;

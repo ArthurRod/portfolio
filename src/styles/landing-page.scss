@@ -2,6 +2,12 @@
 
 .landing-page {
   transition: all ease-in-out 0.3s;
+  margin-top: 130px;
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop-sm) {
+    margin-top: 0px;
+  }
 
   .section-title {
     display: flex;
@@ -9,11 +15,14 @@
     margin-bottom: 30px;
 
     h2 {
-      color: config.$color-bg-dark-theme;
+      color: config.$color-dark-base;
     }
   }
+}
 
-  &.synthwavemode {
+/* Dark Mode */
+.landing-page {
+  &.dark-mode {
     color: config.$color-gray;
 
     .section-title {

@@ -14,7 +14,7 @@ export function ProgressBar({ percentage }: ProgressBarProps) {
         aria-valuenow={percentage}
         style={{ width: `${percentage}%` }}
       >
-        <label>{percentage}%</label>
+        <label aria-label={`Progresso ${percentage}%`}>{percentage}%</label>
       </div>
     </div>
   );

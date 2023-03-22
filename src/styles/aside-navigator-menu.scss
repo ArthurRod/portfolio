@@ -2,109 +2,183 @@
 
 .aside-navigator-menu {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  gap: 5px;
   padding: 15px;
   position: fixed;
   z-index: 2;
-  width: 130px;
-  height: 100vh;
+  width: 100vw;
+  height: 100px;
   left: 0;
   top: 0;
-  background-color: config.$color-gray;
+  background-color: config.$color-base;
   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop-sm) {
+    gap: 30px;
+    flex-direction: column;
+    width: 130px;
+    height: 100vh;
+  }
 
   .controls {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding: 5px 5px 5px 0px;
+
+    /* Mobile M */
+    @media screen and (min-width: config.$media-mobile-m) {
+      padding: 10px 10px 10px 0px;
+    }
+
+    /* Mobile L*/
+    @media screen and (min-width: config.$media-mobile-l) {
+      padding: 15px 15px 15px 0px;
+    }
+
+    /* Desktop */
+    @media screen and (min-width: config.$media-desktop-sm) {
+      padding: 0px;
+    }
+
+    .dark-mode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0px;
+      color: config.$color-blue-base;
+
+      /* Desktop */
+      @media screen and (min-width: config.$media-desktop-sm) {
+        font-size: 14px;
+        gap: 10px;
+      }
+    }
   }
 
   nav {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 100%;
 
     ul {
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      gap: 5px;
+      width: 100%;
       list-style-type: none;
-      gap: 30px;
+
+      /* Desktop */
+      @media screen and (min-width: config.$media-desktop-sm) {
+        flex-direction: column;
+        gap: 30px;
+      }
 
       li {
         display: flex;
         justify-content: center;
+        width: 100%;
+        position: relative;
+        padding: 5px;
+
+        /* Mobile M */
+        @media screen and (min-width: config.$media-mobile-m) {
+          padding: 10px;
+        }
+
+        /* Mobile L*/
+        @media screen and (min-width: config.$media-mobile-l) {
+          padding: 15px;
+        }
+
+        /* Desktop */
+        @media screen and (min-width: config.$media-desktop-sm) {
+          height: 100px;
+          padding: 0px;
+
+          &:hover,
+          &:focus {
+            a {
+              padding-right: 35px;
+
+              .menu-name {
+                opacity: 1;
+                left: calc(100% - 45px);
+                transition: all ease-in-out 0.3s;
+              }
+            }
+          }
+        }
 
         a {
           display: flex;
           justify-content: center;
           align-items: center;
-          position: relative;
-          width: 100%;
-          height: 120px;
-          font-weight: 700;
+          flex-direction: column;
+          gap: 10px;
           text-decoration: none;
-          color: config.$color-ultra-violet;
+          color: config.$color-blue-base;
           transition: all ease-in-out 0.3s;
 
-          &:hover {
-            padding-right: 35px;
-
-            .menu-name {
-              opacity: 1;
-              left: calc(100% - 45px);
-              transition: all ease-in-out 0.3s;
-            }
+          /* Desktop */
+          @media screen and (min-width: config.$media-desktop-sm) {
+            flex-direction: row;
           }
 
           .menu-name {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            left: 0;
-            top: calc(50% - 60px);
-            opacity: 0;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: config.$color-gray;
-            transition: all ease-in-out 0.3s;
-            box-shadow: 25px 0px 20px -20px rgb(0 0 0 / 20%);
+            display: none;
 
-            &::before,
-            &::after {
-              content: "";
-              width: 40px;
-              height: 5px;
-              position: absolute;
-              background-color: config.$color-gray;
-            }
-
-            &::before {
-              top: -4px;
-              transform: rotate(20deg);
-            }
-
-            &::after {
-              bottom: -4px;
-              transform: rotate(-20deg);
-            }
-
-            .content {
+            /* Desktop */
+            @media screen and (min-width: config.$media-desktop-sm) {
               display: flex;
               justify-content: center;
               align-items: center;
+              position: absolute;
+              left: 0;
+              top: calc(50% - 50px);
+              opacity: 0;
               width: 100px;
               height: 100px;
               border-radius: 50%;
-              color: config.$color-gray;
-              background-color: config.$color-ultra-violet;
-              box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+              background-color: config.$color-base;
+              transition: all ease-in-out 0.3s;
+              box-shadow: 25px 0px 20px -20px rgb(0 0 0 / 20%);
 
-              span {
-                font-size: 14px;
+              &::before,
+              &::after {
+                content: "";
+                width: 40px;
+                height: 5px;
+                position: absolute;
+                background-color: config.$color-base;
+              }
+
+              &::before {
+                top: -3px;
+                transform: rotate(20deg);
+              }
+
+              &::after {
+                bottom: -3px;
+                transform: rotate(-20deg);
+              }
+
+              .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                border: 1px solid config.$color-blue-base;
+                color: config.$color-dark-base;
+                background-color: config.$color-light-gray;
+                box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+
+                span {
+                  font-size: 14px;
+                  font-weight: 700;
+                }
               }
             }
           }
@@ -114,10 +188,11 @@
   }
 }
 
+/* Dark Mode */
 .landing-page {
-  &.synthwavemode {
+  &.dark-mode {
     .aside-navigator-menu {
-      background-color: config.$color-ultra-violet;
+      background-color: config.$color-base;
 
       nav {
         ul {
@@ -126,15 +201,15 @@
               color: config.$color-gray;
 
               .menu-name {
-                background-color: config.$color-ultra-violet;
+                background-color: config.$color-base;
 
                 &::before,
                 &::after {
-                  background-color: config.$color-ultra-violet;
+                  background-color: config.$color-base;
                 }
 
                 .content {
-                  color: config.$color-ultra-violet;
+                  color: config.$color-base;
                   background-color: config.$color-gray;
                 }
               }

@@ -1,23 +1,24 @@
 import { Code, House } from "phosphor-react";
+
+import { scrollPage } from "../../helpers/onScroll";
 import { SwitchButton } from "../../components/SwitchButton";
-import { scrollPage } from "../../helpers/scrollPage";
 
 import "../../styles/aside-navigator-menu.scss";
 
 interface AsideNavigatorMenuProps {
-  synthaveMode: boolean;
-  setSynthwaveMode: (synthaveMode: boolean) => void;
+  darkMode: boolean;
+  setDarkMode: (darkMode: boolean) => void;
 }
 
 export function AsideNavigatorMenu({
-  synthaveMode,
-  setSynthwaveMode,
+  darkMode,
+  setDarkMode,
 }: AsideNavigatorMenuProps) {
-  function handleChangeMode() {
-    if (!synthaveMode) {
-      setSynthwaveMode(true);
+  function handleDarkMode() {
+    if (!darkMode) {
+      setDarkMode(true);
     } else {
-      setSynthwaveMode(false);
+      setDarkMode(false);
     }
   }
 
@@ -28,9 +29,14 @@ export function AsideNavigatorMenu({
       aria-label="Menu de navegação lateral"
     >
       <div className="controls">
-        <SwitchButton action={handleChangeMode} />
+        <div className="dark-mode" aria-label="Ativar modo noturno">
+          <span>
+            <b> Modo escuro</b>
+          </span>
+          <SwitchButton action={handleDarkMode} />
+        </div>
       </div>
-      <nav>
+      <nav aria-label="Menus">
         <ul>
           <li aria-label="Menu resumo">
             <a href="#resume" onClick={() => scrollPage("resume")}>

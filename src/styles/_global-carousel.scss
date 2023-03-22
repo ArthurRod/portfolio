@@ -1,6 +1,10 @@
 @use "./config";
 
 .swiper {
+  .swiper-wrapper {
+    padding-bottom: 30px;
+  }
+
   .swiper-pagination.swiper-pagination-bullets {
     display: flex;
     align-items: center;
@@ -15,21 +19,23 @@
     .swiper-pagination-bullet {
       width: 10px;
       height: 10px;
-      border: 1px solid config.$color-ultra-violet;
+      border: 1px solid config.$color-dark-base;
       background-color: config.$color-gray;
       transition: transform 0.3s;
 
       &:hover,
       &.swiper-pagination-bullet-active {
-        background: config.$color-ultra-violet;
+        border: 1px solid config.$color-dark-base;
+        background-color: config.$color-blue-base;
         transform: scale(1.5);
       }
     }
   }
 }
 
+/* Dark Mode */
 .landing-page {
-  &.synthwavemode {
+  &.dark-mode {
     .swiper {
       .swiper-pagination.swiper-pagination-bullets {
         .swiper-pagination-bullet {

@@ -12,7 +12,7 @@ export function SkillCard({
   skillPercentage,
 }: SkillCardProps) {
   return (
-    <div className="skill-card" aria-label={`Card Habilidade ${skillName}`}>
+    <div className="skill-card" aria-label={`Habilidade ${skillName}`}>
       <div className="skill-image" role="img" aria-label="Imagem da tecnologia">
         <img src={skillImage} alt={skillName} loading="lazy" />
       </div>

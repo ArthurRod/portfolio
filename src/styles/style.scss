@@ -17,17 +17,17 @@ body {
   @include config.font-regular;
   font-size: 16px;
   color: config.$color-black;
-  background-color: config.$color-gray;
-}
-
-.container {
-  margin: 0px auto;
-  max-width: 100%;
-  padding-left: 130px;
-
-  @media screen and (min-width: config.$media-desktop) {
-    max-width: 1270px;
-  }
+  background-color: config.$color-light-gray;
 }
 
 /* GLOBAL CLASSES */
+.container {
+  max-width: calc(100% - 30px);
+  margin: 0px auto;
+  width: 100%;
+
+  @media screen and (min-width: config.$media-desktop) {
+    width: 1270px;
+    padding-left: 130px;
+  }
+}

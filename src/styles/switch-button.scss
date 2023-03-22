@@ -1,14 +1,14 @@
 @use "./config";
 
 .switch-button {
+  position: relative;
   height: 25px;
   width: 50px;
   border-radius: 20px;
   border: none;
-  background-color: config.$color-ultra-violet;
-  position: relative;
-  transition: all ease-in-out 0.3s;
+  background-color: config.$color-blue-base;
   cursor: pointer;
+  transition: all ease-in-out 0.3s;
 
   &[data-state="checked"] {
     span {
@@ -18,21 +18,22 @@
 
   span {
     display: flex;
-    background-color: config.$color-white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
     position: absolute;
     top: 2.5px;
     left: 2.5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: config.$color-base;
     transition: all ease-in-out 0.3s;
   }
 }
 
+/* Dark Mode */
 .landing-page {
-  &.synthwavemode {
+  &.dark-mode {
     .switch-button {
-      background-color: config.$color-bg-dark-theme;
+      background-color: config.$color-base-dark-theme;
     }
   }
 }

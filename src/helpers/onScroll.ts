@@ -15,6 +15,19 @@ export function scrollAnimateElements() {
   }
 }
 
+export function scrollPage(path: string) {
+  const element = document.getElementById(path);
+  const screenWidth = window.screen.width;
+
+  if (element) {
+    if (screenWidth > 768) {
+      window.scrollTo(0, element.offsetTop);
+    } else {
+      window.scrollTo(0, element.offsetTop);
+    }
+  }
+}
+
 window.addEventListener("scroll", () => {
   scrollAnimateElements();
 });
