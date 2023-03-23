@@ -43,15 +43,24 @@
 
     .dark-mode {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      font-size: 0px;
+      width: 100%;
+      font-size: 0rem;
       color: config.$color-blue-base;
 
       /* Desktop */
       @media screen and (min-width: config.$media-desktop-sm) {
-        font-size: 14px;
+        font-size: 1.4rem;
         gap: 10px;
+      }
+
+      svg {
+        display: none;
+
+        /* Desktop */
+        @media screen and (min-width: config.$media-desktop-sm) {
+          display: flex;
+        }
       }
     }
   }
@@ -176,8 +185,8 @@
                 box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 
                 span {
-                  font-size: 14px;
-                  font-weight: 700;
+                  @include config.font-title;
+                  font-size: 1.4rem;
                 }
               }
             }
@@ -193,6 +202,12 @@
   &.dark-mode {
     .aside-navigator-menu {
       background-color: config.$color-base;
+
+      .controls {
+        .dark-mode {
+          color: config.$color-gray;
+        }
+      }
 
       nav {
         ul {

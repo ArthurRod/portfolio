@@ -2,22 +2,23 @@
 @use "./animations";
 
 /* RESET */
+:root {
+  font-size: 62.5%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   @include config.font-regular;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: config.$color-black;
   background-color: config.$color-light-gray;
+  scroll-behavior: smooth;
 }
 
 /* GLOBAL CLASSES */

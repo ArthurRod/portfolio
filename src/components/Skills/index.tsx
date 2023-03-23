@@ -12,6 +12,29 @@ interface SkillsProps {
   skills: Skill[];
 }
 
+const breakpointsConfig = {
+  320: {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 0,
+  },
+  375: {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 5,
+  },
+  768: {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 20,
+  },
+  1280: {
+    slidesPerView: 5,
+    slidesPerGroup: 3,
+    spaceBetween: 30,
+  },
+};
+
 export function Skills({ skills }: SkillsProps) {
   return (
     <section
@@ -28,9 +51,7 @@ export function Skills({ skills }: SkillsProps) {
           <h2>Habilidades</h2>
         </div>
         <Swiper
-          slidesPerView={5}
-          slidesPerGroup={3}
-          spaceBetween={30}
+          breakpoints={breakpointsConfig}
           grabCursor={true}
           loop={true}
           speed={1000}

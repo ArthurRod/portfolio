@@ -13,17 +13,21 @@
   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
   transition: all ease-in-out 0.3s;
 
-  &:hover {
-    transform: scale(1.05);
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop-sm) {
+    &:hover {
+      transform: scale(1.05);
 
-    .skill-name {
-      opacity: 1;
-      bottom: calc(50% - 30px);
+      .skill-name {
+        opacity: 1;
+        bottom: calc(50% - 30px);
+      }
     }
   }
 
   .skill-image img {
     max-width: 100%;
+    height: auto;
   }
 
   .skill-name {
@@ -44,15 +48,50 @@
 
     h4 {
       color: config.$color-blue-base;
+      font-size: 1.2rem;
+
+      /* Mobile M */
+      @media screen and (min-width: config.$media-mobile-m) {
+        font-size: 1.4rem;
+      }
     }
   }
 
   .progress-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     margin-bottom: 5px;
 
     span {
-      font-size: 14px;
+      @include config.font-subtitle;
+      font-size: 1.2rem;
       color: config.$color-dark-base;
+
+      /* Mobile M */
+      @media screen and (min-width: config.$media-mobile-m) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+/* Mobile Card Effect */
+.swiper-wrapper {
+  .swiper-slide {
+    &.swiper-slide-active,
+    &.swiper-slide-next,
+    &.swiper-slide-next + .swiper-slide {
+      @media screen and (max-width: config.$media-tablet) {
+        .skill-card {
+          transform: scale(1.05);
+
+          .skill-name {
+            opacity: 1;
+            bottom: calc(50% - 30px);
+          }
+        }
+      }
     }
   }
 }

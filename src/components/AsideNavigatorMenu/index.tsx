@@ -1,4 +1,4 @@
-import { Code, House } from "phosphor-react";
+import { Code, House, Moon } from "phosphor-react";
 
 import { scrollPage } from "../../helpers/onScroll";
 import { SwitchButton } from "../../components/SwitchButton";
@@ -30,9 +30,7 @@ export function AsideNavigatorMenu({
     >
       <div className="controls">
         <div className="dark-mode" aria-label="Ativar modo noturno">
-          <span>
-            <b> Modo escuro</b>
-          </span>
+          <Moon size={32} />
           <SwitchButton action={handleDarkMode} />
         </div>
       </div>

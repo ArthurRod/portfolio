@@ -11,15 +11,16 @@
 
   /* Tablet */
   @media screen and (min-width: config.$media-tablet) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
+    height: 75vh;
   }
 
   /* Desktop */
   @media screen and (min-width: config.$media-desktop-sm) {
+    position: fixed;
+    top: 0;
+    left: 0;
     padding-top: 30px;
+    height: 100vh;
   }
 
   .container {
@@ -28,6 +29,11 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    /* Only tablets */
+    @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
+      flex-direction: row;
+    }
 
     /* Desktop */
     @media screen and (min-width: config.$media-desktop-sm) {
@@ -39,8 +45,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 290px;
-      height: 290px;
+      width: 215px;
+      height: 215px;
       overflow: hidden;
       border-radius: 50%;
       border: 1px solid config.$color-blue-base;
@@ -48,14 +54,44 @@
       box-shadow: 0 0 10px rgb(0 0 0 / 20%);
       transition: all ease-in-out 0.3s;
 
-      img {
-        width: 225px;
+      /* Mobile M */
+      @media screen and (min-width: config.$media-mobile-m) and (max-width: config.$media-tablet-xs) {
+        width: 290px;
+        height: 290px;
+      }
+
+      /* Only tablets */
+      @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
+        width: 215px;
+        height: 215px;
       }
 
       /* Desktop */
       @media screen and (min-width: config.$media-desktop-sm) {
+        width: 290px;
+        height: 290px;
+
         &:hover {
           transform: scale(1.05);
+        }
+      }
+
+      img {
+        width: 175px;
+
+        /* Mobile M */
+        @media screen and (min-width: config.$media-mobile-m) and (max-width: config.$media-tablet-xs) {
+          width: 235px;
+        }
+
+        /* Only tablets */
+        @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
+          width: 175px;
+        }
+
+        /* Desktop */
+        @media screen and (min-width: config.$media-desktop-sm) {
+          width: 235px;
         }
       }
     }
@@ -69,6 +105,11 @@
       min-height: 200px;
       transition: all ease-in-out 0.3s;
 
+      /* Only tablets */
+      @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
+        width: calc(100% - 215px);
+      }
+
       /* Desktop */
       @media screen and (min-width: config.$media-desktop-sm) {
         width: calc(100% - 290px);
@@ -81,36 +122,47 @@
         .name,
         .position {
           h2 {
-            font-size: 18px;
+            @include config.font-subtitle;
+            font-size: 1.8rem;
             text-align: center;
 
             /* Mobile M */
             @media screen and (min-width: config.$media-mobile-m) {
-              font-size: 20px;
+              font-size: 2rem;
+            }
+
+            /* Tablet */
+            @media screen and (min-width: config.$media-tablet-xs) {
+              font-size: 2.2rem;
+              text-align: left;
             }
 
             /* Desktop */
             @media screen and (min-width: config.$media-desktop-sm) {
-              font-size: 24px;
-              text-align: left;
+              font-size: 2.4rem;
             }
           }
         }
 
         .name {
           h1 {
-            font-size: 26px;
+            font-size: 2.6rem;
             text-align: center;
 
             /* Mobile M */
             @media screen and (min-width: config.$media-mobile-m) {
-              font-size: 30px;
+              font-size: 3rem;
+            }
+
+            /* Tablet */
+            @media screen and (min-width: config.$media-tablet-xs) {
+              font-size: 4rem;
+              text-align: left;
             }
 
             /* Desktop */
             @media screen and (min-width: config.$media-desktop-sm) {
-              font-size: 60px;
-              text-align: left;
+              font-size: 6rem;
             }
           }
         }
@@ -121,8 +173,17 @@
         text-align: center;
 
         /* Desktop */
-        @media screen and (min-width: config.$media-desktop-sm) {
+        @media screen and (min-width: config.$media-tablet-xs) {
           text-align: left;
+        }
+
+        p {
+          a {
+            &:hover,
+            &:focus {
+              color: config.$color-dark-base;
+            }
+          }
         }
       }
     }

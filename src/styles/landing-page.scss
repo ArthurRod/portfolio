@@ -15,7 +15,13 @@
     margin-bottom: 30px;
 
     h2 {
+      @include config.font-subtitle;
       color: config.$color-dark-base;
+
+      /* Desktop */
+      @media screen and (min-width: config.$media-desktop-sm) {
+        font-size: 3rem;
+      }
     }
   }
 }

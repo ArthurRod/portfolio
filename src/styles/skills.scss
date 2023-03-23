@@ -9,8 +9,8 @@
   padding-bottom: 30px;
   background-color: config.$color-light-gray;
 
-  /* Tablet */
-  @media screen and (min-width: config.$media-tablet) {
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop) {
     margin-top: 100vh;
     box-shadow: 0 0 10px rgb(0 0 0 / 20%);
   }
