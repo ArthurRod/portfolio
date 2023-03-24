@@ -179,9 +179,11 @@
 
         p {
           a {
+            color: config.$color-base;
+
             &:hover,
             &:focus {
-              color: config.$color-dark-base;
+              color: config.$color-light-base;
             }
           }
         }
