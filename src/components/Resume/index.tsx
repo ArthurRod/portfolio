@@ -1,12 +1,13 @@
 import "../../styles/resume.scss";
 import { ResumeType } from "../../types/ResumeType";
+import { SocialMedias } from "./SocialMedias";
 
 interface ResumeProps {
   resume: ResumeType;
 }
 
 export function Resume({ resume }: ResumeProps) {
-  const { image, name, position } = resume;
+  const { image, name, position, socialMedias } = resume;
 
   return (
     <section id="resume" className="resume" aria-label="Seção Resumo">
@@ -20,7 +21,7 @@ export function Resume({ resume }: ResumeProps) {
           />
         </div>
         <div className="infos" aria-label="Informações principais">
-          <div className="name-position">
+          <div className="name-position" aria-label="Nome e cargo">
             <div className="name" aria-label="Nome">
               <h2>Hello world!</h2>
               <h1>I'm {name}</h1>
@@ -34,17 +35,20 @@ export function Resume({ resume }: ResumeProps) {
             <p>
               Engenheiro de Software formado pela Unicesumar e desenvolvedor
               Front-End Web. Há mais de dois anos atuando com implantação e
-              manutenção de e-commerce utilizando VTEX IO e VTEX CMS com as
-              tecnologias React, JavaScript, HTML, CSS e SCSS pela agência{" "}
+              manutenção de e-commerce VTEX IO e VTEX CMS utilizando as
+              tecnologias React, TypeScript, JavaScript, HTML5, CSS3 e Sass pela
+              agência&nbsp;
               <a target="_blank" href="https://www.siriusdigital.com.br/">
-                SIRIUS Digital
+                Sirius Digital,
               </a>
-              , uma empresa subsidiária da{" "}
+              &nbsp;uma empresa subsidiária da&nbsp;
               <a target="_blank" href="https://leste.totvs.com/">
-                TOTVS Leste
+                TOTVS Leste.
               </a>
             </p>
           </div>
+
+          <SocialMedias socialMedias={socialMedias} />
         </div>
       </div>
     </section>

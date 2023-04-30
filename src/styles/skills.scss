@@ -9,12 +9,6 @@
   padding-bottom: 30px;
   background-color: config.$color-light-gray;
 
-  /* Desktop */
-  @media screen and (min-width: config.$media-desktop) {
-    margin-top: 100vh;
-    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-  }
-
   .swiper-wrapper {
     .swiper-slide {
       &:hover {
@@ -35,6 +29,7 @@
     .skills {
       background-color: config.$color-base-dark-theme;
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
   }
 }

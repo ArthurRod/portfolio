@@ -2,7 +2,27 @@
   "resume": {
     "image": "./src/assets/png/profile.png",
     "name": "Arthur Rodrigues",
-    "position": "Software Engineer & Front-End Web Developer"
+    "position": "Software Engineer & Front-End Web Developer",
+    "socialMedias": [
+      {
+        "name": "GitHub",
+        "icon": "./src/assets/png/github-mark.png",
+        "link": "https://github.com/ArthurRod"
+      },
+      {
+        "name": "Linkedin",
+        "icon": "./src/assets/png/linkedin.png",
+        "link": "https://www.linkedin.com/in/arthurrod"
+      },
+      {
+        "name": "Currículo",
+        "icon": "./src/assets/png/file-pdf.png",
+        "link": "https://drive.google.com/file/d/1dBNyXBmEbLOCr5MCbsW3uJVzHI-o_jtA"
+      }
+    ]
+  },
+  "about": {
+    "image": "./src/assets/png/profile.png"
   },
   "skills": [
     {

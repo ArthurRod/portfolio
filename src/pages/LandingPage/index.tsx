@@ -8,6 +8,7 @@ import { Skills } from "../../components/Skills";
 import { AsideNavigatorMenu } from "../../components/AsideNavigatorMenu";
 
 import "../../styles/landing-page.scss";
+import { About } from "../../components/About";
 
 export function LandingPage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,6 +28,7 @@ export function LandingPage() {
     >
       <AsideNavigatorMenu darkMode={darkMode} setDarkMode={setDarkMode} />
       <Resume resume={info.resume} />
+      <About about={info.about} />
       <Skills skills={info.skills} />
     </main>
   );

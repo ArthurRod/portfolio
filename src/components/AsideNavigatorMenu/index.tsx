@@ -1,4 +1,4 @@
-import { Code, House, Moon } from "phosphor-react";
+import { Code, House, Moon, User } from "phosphor-react";
 
 import { scrollPage } from "../../helpers/onScroll";
 import { SwitchButton } from "../../components/SwitchButton";
@@ -42,6 +42,16 @@ export function AsideNavigatorMenu({
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
                   <span>Resumo</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li aria-label="Menu sobre mim">
+            <a href="#about" onClick={() => scrollPage("about")}>
+              <User size={32} />
+              <div className="menu-name" aria-label="Nome do menu">
+                <div className="content">
+                  <span>Sobre mim</span>
                 </div>
               </div>
             </a>

@@ -205,32 +205,16 @@
         .image {
           background-color: transparent;
           backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
         }
 
         .infos {
           border-radius: 20px;
           box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-          background-color: config.$color-base;
           background-color: transparent;
           backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
           border: 1px solid config.$color-blue-base;
-        }
-
-        /* Desktop */
-        @media screen and (min-width: config.$media-desktop-sm) {
-          .resume-description {
-            &:hover {
-              p {
-                height: 120px;
-              }
-            }
-
-            p {
-              height: 60px;
-              overflow: hidden;
-              transition: height ease-in-out 0.3s;
-            }
-          }
         }
       }
     }
