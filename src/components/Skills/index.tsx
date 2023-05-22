@@ -41,12 +41,13 @@ export function Skills({ skills }: SkillsProps) {
       id="skills"
       className="skills"
       aria-label="Seção Habilidades"
-      data-animate="bottom"
+      data-animate="animate"
     >
       <div className="container">
         <div
           className="section-title"
           aria-label="Título da Seção de Habilidades"
+          data-animate="left"
         >
           <h2>Habilidades</h2>
         </div>
@@ -61,6 +62,7 @@ export function Skills({ skills }: SkillsProps) {
             delay: 2500,
             disableOnInteraction: false,
           }}
+          data-animate="bottom"
         >
           {skills.map((skill: Skill, i: number) => {
             const { image, name, percentage } = skill;

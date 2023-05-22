@@ -1,10 +1,19 @@
 [data-animate] {
   opacity: 0;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.7s;
 
   &.animate {
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+[data-animate="animate"] {
+  opacity: 0;
+  transition: all ease-in-out 0.1s;
+
+  &.animate {
+    opacity: 1;
   }
 }
 

@@ -9,6 +9,8 @@ import { AsideNavigatorMenu } from "../../components/AsideNavigatorMenu";
 
 import "../../styles/landing-page.scss";
 import { About } from "../../components/About";
+import Projects from "../../components/Projects";
+import { Contact } from "../../components/Contact";
 
 export function LandingPage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,6 +32,8 @@ export function LandingPage() {
       <Resume resume={info.resume} />
       <About about={info.about} />
       <Skills skills={info.skills} />
+      <Projects projects={info.projects} />
+      <Contact />
     </main>
   );
 }

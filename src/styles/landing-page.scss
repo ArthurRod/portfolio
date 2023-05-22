@@ -2,7 +2,7 @@
 
 .landing-page {
   transition: all ease-in-out 0.3s;
-  margin-top: 130px;
+  margin-top: 30px;
 
   /* Desktop */
   @media screen and (min-width: config.$media-desktop-sm) {
@@ -15,8 +15,24 @@
     margin-bottom: 30px;
 
     h2 {
-      @include config.font-subtitle;
+      @include config.font-title;
       color: config.$color-dark-base;
+
+      /* Desktop */
+      @media screen and (min-width: config.$media-desktop-sm) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .section-title-inverted {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    h2 {
+      @include config.font-title;
+      color: config.$color-blue-base;
 
       /* Desktop */
       @media screen and (min-width: config.$media-desktop-sm) {

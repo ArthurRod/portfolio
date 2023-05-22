@@ -1,0 +1,72 @@
+@use "./config";
+
+.projects {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: config.$color-base;
+
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+      border: 1px solid config.$color-blue-base;
+      border-radius: 20px;
+      padding: 20px;
+
+      ul {
+        list-style: none;
+      }
+
+      .name h3,
+      .description p,
+      .links span,
+      .links a {
+        color: config.$color-light-gray;
+      }
+
+      .name {
+        text-align: center;
+
+        h3 {
+          font-weight: 500;
+          font-size: 2.5rem;
+          color: config.$color-blue-base;
+        }
+      }
+
+      .prints {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          li {
+            img {
+              border-radius: 10px;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .links {
+        font-weight: 500;
+
+        a {
+          transition: color ease-in-out 0.3s;
+
+          &:hover,
+          &:focus {
+            color: config.$color-blue-base;
+          }
+        }
+      }
+    }
+  }
+}

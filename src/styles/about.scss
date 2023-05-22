@@ -1,14 +1,43 @@
 @use "./config";
 
 .about {
-  height: 100vh;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: config.$color-light-gray;
+  background-color: config.$color-base;
 
   /* Desktop */
   @media screen and (min-width: config.$media-desktop) {
     margin-top: 100vh;
     box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+
+    /* Desktop */
+    @media screen and (min-width: config.$media-desktop) {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+
+    /* Desktop */
+    @media screen and (min-width: config.$media-desktop) {
+      display: block;
+    }
+  }
+
+  .description-wrapper {
+    .description {
+      p {
+        color: config.$color-light-gray;
+      }
+    }
   }
 }

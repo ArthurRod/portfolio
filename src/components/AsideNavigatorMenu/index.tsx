@@ -1,4 +1,4 @@
-import { Code, House, Moon, User } from "phosphor-react";
+import { Code, House, Moon, User, Palette, Phone } from "phosphor-react";
 
 import { scrollPage } from "../../helpers/onScroll";
 import { SwitchButton } from "../../components/SwitchButton";
@@ -37,7 +37,7 @@ export function AsideNavigatorMenu({
       <nav aria-label="Menus">
         <ul>
           <li aria-label="Menu resumo">
-            <a href="#resume" onClick={() => scrollPage("resume")}>
+            <a onClick={() => scrollPage("resume")}>
               <House size={32} />
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
@@ -47,7 +47,7 @@ export function AsideNavigatorMenu({
             </a>
           </li>
           <li aria-label="Menu sobre mim">
-            <a href="#about" onClick={() => scrollPage("about")}>
+            <a onClick={() => scrollPage("about")}>
               <User size={32} />
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
@@ -57,11 +57,31 @@ export function AsideNavigatorMenu({
             </a>
           </li>
           <li aria-label="Menu habilidades">
-            <a href="#skills" onClick={() => scrollPage("skills")}>
+            <a onClick={() => scrollPage("skills")}>
               <Code size={32} />
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
                   <span>Habilidades</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li aria-label="Menu projetos">
+            <a onClick={() => scrollPage("projects")}>
+              <Palette size={32} />
+              <div className="menu-name" aria-label="Nome do menu">
+                <div className="content">
+                  <span>Projetos</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li aria-label="Menu contato">
+            <a onClick={() => scrollPage("contact")}>
+              <Phone size={32} />
+              <div className="menu-name" aria-label="Nome do menu">
+                <div className="content">
+                  <span>Contato</span>
                 </div>
               </div>
             </a>

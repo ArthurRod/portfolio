@@ -45,12 +45,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 215px;
-      height: 215px;
+      width: 260px;
+      height: 260px;
       overflow: hidden;
       border-radius: 50%;
-      border: 1px solid config.$color-blue-base;
-      background-color: config.$color-base;
+      border: 1px solid config.$color-base;
       box-shadow: 0 0 10px rgb(0 0 0 / 20%);
       transition: all ease-in-out 0.3s;
 
@@ -77,7 +76,7 @@
       }
 
       img {
-        width: 175px;
+        width: 225px;
 
         /* Mobile M */
         @media screen and (min-width: config.$media-mobile-m) and (max-width: config.$media-tablet-xs) {
@@ -203,7 +202,6 @@
 
       .container {
         .image {
-          background-color: transparent;
           backdrop-filter: blur(5px);
           -webkit-backdrop-filter: blur(5px);
         }

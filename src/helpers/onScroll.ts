@@ -1,3 +1,5 @@
+let lastScrollTop = 0;
+
 export function scrollAnimateElements() {
   const targets = document.querySelectorAll(
     "[data-animate]"
@@ -28,6 +30,27 @@ export function scrollPage(path: string) {
   }
 }
 
+export function headerShowMobile() {
+  const screenWidth = window.screen.width;
+
+  if (screenWidth >= 1025) return;
+
+  const element = document.getElementById("aside-navigator-menu");
+
+  if (element) {
+    var actualScrollTop = window.scrollY;
+
+    if (actualScrollTop > lastScrollTop) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
+
+    lastScrollTop = actualScrollTop;
+  }
+}
+
 window.addEventListener("scroll", () => {
   scrollAnimateElements();
+  headerShowMobile();
 });

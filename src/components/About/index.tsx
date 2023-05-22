@@ -15,14 +15,21 @@ export function About({ about }: AboutProps) {
       id="about"
       className="about"
       aria-label="Seção sobre mim"
-      data-animate="left"
+      data-animate="animate"
     >
       <div className="container">
-        <div className="image" aria-label="Imagem">
+        <div className="image" aria-label="Imagem" data-animate="right">
           <img src={image} alt="Imagem de perfil" width={225} loading="lazy" />
         </div>
-        <div className="description-wrapper" aria-label="Descrição">
-          <div className="title" aria-label="Título da descrição">
+        <div
+          className="description-wrapper"
+          aria-label="Descrição"
+          data-animate="left"
+        >
+          <div
+            className="section-title-inverted"
+            aria-label="Título da descrição"
+          >
             <h2>Sobre mim</h2>
           </div>
 
@@ -49,7 +56,7 @@ export function About({ about }: AboutProps) {
               passa, tenho mais certeza que fiz a escolha certa. Às vezes, sinto
               que deveria ter começado antes, mas os erros que cometi me
               ensinaram muitas coisas valiosas. Eles me trouxeram até aqui, e
-              por isso, sou grato a Deus pelos meus erros.
+              por isso, sou grato a Deus.
             </p>
           </div>
         </div>

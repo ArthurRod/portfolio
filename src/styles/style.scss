@@ -21,6 +21,33 @@ body {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: config.$color-base;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: config.$color-blue-base;
+  border-radius: 10px;
+  border: 3px solid config.$color-base;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #00bfff #654597;
+}
+
+input:focus,
+textarea:focus,
+button:focus,
+a:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
 /* GLOBAL CLASSES */
 .container {
   max-width: calc(100% - 30px);

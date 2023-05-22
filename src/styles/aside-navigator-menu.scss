@@ -10,9 +10,10 @@
   width: 100vw;
   height: 100px;
   left: 0;
-  top: 0;
+  top: -110px;
   background-color: config.$color-base;
   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  transition: top ease-in-out 0.3s;
 
   /* Desktop */
   @media screen and (min-width: config.$media-desktop-sm) {
@@ -20,6 +21,11 @@
     flex-direction: column;
     width: 130px;
     height: 100vh;
+    top: 0;
+  }
+
+  &.active {
+    top: 0;
   }
 
   .controls {
@@ -132,16 +138,11 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-direction: column;
           gap: 10px;
           text-decoration: none;
           color: config.$color-blue-base;
           transition: all ease-in-out 0.3s;
-
-          /* Desktop */
-          @media screen and (min-width: config.$media-desktop-sm) {
-            flex-direction: row;
-          }
+          cursor: pointer;
 
           .menu-name {
             display: none;
