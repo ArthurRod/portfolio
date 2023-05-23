@@ -3,11 +3,17 @@
 .social-medias {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   list-style: none;
   background-color: transparent;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop-sm) {
+    justify-content: flex-start;
+  }
 
   .social-media {
     a {

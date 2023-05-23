@@ -5,6 +5,7 @@
   width: 100vw;
   display: flex;
   align-items: center;
+  padding-top: 30px;
   padding-bottom: 30px;
   color: config.$color-base-dark;
   background: config.$color-gradient;
@@ -210,11 +211,15 @@
 
         .infos {
           border-radius: 10px;
-          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
           background-color: transparent;
-          backdrop-filter: blur(5px);
-          -webkit-backdrop-filter: blur(5px);
-          border: 1px solid config.$color-base-inverted-dark-theme;
+
+          /* Desktop */
+          @media screen and (min-width: config.$media-desktop-sm) {
+            box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid config.$color-base-inverted-dark-theme;
+          }
 
           .name-position {
             text-shadow: 2px 2px config.$color-base-inverted-dark-theme;
@@ -233,6 +238,22 @@
                   opacity: 0.8;
                 }
               }
+            }
+          }
+
+          .social-medias {
+            background-color: config.$color-light-gray;
+            box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid config.$color-base-inverted-dark-theme;
+            border-radius: 10px;
+
+            /* Desktop */
+            @media screen and (min-width: config.$media-desktop-sm) {
+              box-shadow: none;
+              backdrop-filter: unset;
+              -webkit-backdrop-filter: unset;
             }
           }
         }

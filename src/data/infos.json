@@ -122,7 +122,7 @@
       "printMobile": "./src/assets/png/projeto-fretta-vtexio-mobile.png"
     },
     {
-      "name": "N.A.V.E",
+      "name": "N.A.V.E.",
       "description": "Este projeto já havia sido desenvolvido anteriormente. No entanto, devido a alguns motivos, foi necessário refazer a parte dos componentes e a parte de estilização. Também foram utilizados componentes padrão VTEX IO, e alguns componentes personalizados com REACT e Typescript. A estilização foi feita utilizando CSS.",
       "link": "https://www.navegamer.com.br",
       "print": "./src/assets/png/projeto-nave-vtexio.png",

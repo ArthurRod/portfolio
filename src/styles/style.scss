@@ -21,6 +21,10 @@ body {
   scroll-behavior: smooth;
 }
 
+body.dark-mode {
+  background-color: config.$color-base-dark-theme;
+}
+
 body::-webkit-scrollbar {
   width: 12px;
 }
