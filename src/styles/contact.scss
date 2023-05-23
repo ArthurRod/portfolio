@@ -141,3 +141,53 @@
     }
   }
 }
+
+/* Dark Mode */
+.landing-page {
+  &.dark-mode {
+    .contact {
+      background-color: config.$color-base;
+
+      .content {
+        form {
+          background-color: config.$color-base-dark-theme;
+
+          input,
+          textarea {
+            &:focus {
+              border-color: config.$color-base-inverted-dark-theme;
+            }
+          }
+
+          .send-btn {
+            color: config.$color-light-gray;
+            background-color: config.$color-base;
+
+            &:hover,
+            &:focus {
+              border-color: config.$color-base-inverted-dark-theme;
+            }
+          }
+        }
+
+        .option {
+          color: config.$color-light-gray;
+
+          &::before,
+          &::after {
+            background-color: config.$color-light-gray;
+          }
+        }
+
+        .whatsapp-btn {
+          color: config.$color-light-gray;
+
+          &:hover,
+          &:focus {
+            color: config.$color-base-inverted-dark-theme;
+          }
+        }
+      }
+    }
+  }
+}

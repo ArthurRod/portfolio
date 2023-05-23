@@ -28,3 +28,16 @@
     }
   }
 }
+
+/* Dark Mode */
+.landing-page {
+  &.dark-mode {
+    .progress-bar-wrapper {
+      .progress-bar {
+        label {
+          color: config.$color-light-gray;
+        }
+      }
+    }
+  }
+}

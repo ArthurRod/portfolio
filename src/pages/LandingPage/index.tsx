@@ -21,6 +21,20 @@ export function LandingPage() {
     scrollAnimateElements();
   }, []);
 
+  useEffect(() => {
+    addDarkModeClassToBody();
+  }, [darkMode]);
+
+  function addDarkModeClassToBody() {
+    const body = document.querySelectorAll("body")[0];
+
+    if (body.classList.contains("dark-mode")) {
+      body.classList.remove("dark-mode");
+    } else {
+      body.classList.add("dark-mode");
+    }
+  }
+
   if (!info) return null;
 
   return (

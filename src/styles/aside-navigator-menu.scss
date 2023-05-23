@@ -190,7 +190,7 @@
                 height: 90px;
                 border-radius: 50%;
                 border: 1px solid config.$color-blue-base;
-                color: config.$color-dark-base;
+                color: config.$color-base-dark;
                 background-color: config.$color-light-gray;
                 box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 
@@ -211,11 +211,11 @@
 .landing-page {
   &.dark-mode {
     .aside-navigator-menu {
-      background-color: config.$color-base;
+      background-color: config.$color-base-dark-theme;
 
       .controls {
         .dark-mode {
-          color: config.$color-gray;
+          color: config.$color-base-inverted-dark-theme;
         }
       }
 
@@ -223,19 +223,20 @@
         ul {
           li {
             a {
-              color: config.$color-gray;
+              color: config.$color-base-inverted-dark-theme;
 
               .menu-name {
-                background-color: config.$color-base;
+                background-color: config.$color-base-dark-theme;
 
                 &::before,
                 &::after {
-                  background-color: config.$color-base;
+                  background-color: config.$color-base-dark-theme;
                 }
 
                 .content {
-                  color: config.$color-base;
-                  background-color: config.$color-gray;
+                  color: config.$color-light-gray;
+                  background-color: config.$color-base;
+                  border: 1px solid config.$color-base-inverted-dark-theme;
                 }
               }
             }

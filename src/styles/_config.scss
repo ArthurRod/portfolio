@@ -2,7 +2,6 @@
 
 $color-white: #fff;
 $color-black: #000;
-$color-gray: #a6a6a6;
 $color-light-gray: #f5f5f5;
 $color-success: #4cbb17;
 $color-error: #e2555b;
@@ -14,12 +13,13 @@ $color-gradient: linear-gradient(
 
 /* Default colors */
 $color-base: #654597;
-$color-dark-base: #462f63;
+$color-base-dark: #462f63;
 $color-light-base: #8c5aa5;
 $color-blue-base: #00bfff;
-$color-yellow-base: #ffd700;
+
 /* Dark theme colors */
 $color-base-dark-theme: #1d0831;
+$color-base-inverted-dark-theme: #ff00ff;
 
 $media-mobile-sm: 320px;
 $media-mobile-m: 375px;

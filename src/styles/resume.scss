@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 30px;
-  color: config.$color-dark-base;
+  color: config.$color-base-dark;
   background: config.$color-gradient;
 
   /* Tablet */
@@ -195,6 +195,7 @@
 .landing-page {
   &.dark-mode {
     .resume {
+      color: config.$color-light-gray;
       background: url("../assets/jpg/sunset-city.jpg");
       background-repeat: no-repeat;
       background-size: cover;
@@ -204,15 +205,36 @@
         .image {
           backdrop-filter: blur(5px);
           -webkit-backdrop-filter: blur(5px);
+          border: 1px solid config.$color-base-inverted-dark-theme;
         }
 
         .infos {
-          border-radius: 20px;
+          border-radius: 10px;
           box-shadow: 0 0 10px rgb(0 0 0 / 20%);
           background-color: transparent;
           backdrop-filter: blur(5px);
           -webkit-backdrop-filter: blur(5px);
-          border: 1px solid config.$color-blue-base;
+          border: 1px solid config.$color-base-inverted-dark-theme;
+
+          .name-position {
+            text-shadow: 2px 2px config.$color-base-inverted-dark-theme;
+          }
+
+          .resume-description {
+            color: config.$color-light-gray;
+
+            p {
+              a {
+                color: config.$color-light-gray;
+
+                &:hover,
+                &:focus {
+                  color: config.$color-light-gray;
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
         }
       }
     }

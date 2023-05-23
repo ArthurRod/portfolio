@@ -16,7 +16,7 @@
 
     h2 {
       @include config.font-title;
-      color: config.$color-dark-base;
+      color: config.$color-base-dark;
 
       /* Desktop */
       @media screen and (min-width: config.$media-desktop-sm) {
@@ -45,11 +45,15 @@
 /* Dark Mode */
 .landing-page {
   &.dark-mode {
-    color: config.$color-gray;
-
     .section-title {
       h2 {
-        color: config.$color-gray;
+        color: config.$color-light-gray;
+      }
+    }
+
+    .section-title-inverted {
+      h2 {
+        color: config.$color-base-inverted-dark-theme;
       }
     }
   }

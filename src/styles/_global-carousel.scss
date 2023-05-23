@@ -19,13 +19,13 @@
     .swiper-pagination-bullet {
       width: 10px;
       height: 10px;
-      border: 1px solid config.$color-dark-base;
-      background-color: config.$color-gray;
+      border: 1px solid config.$color-base-dark;
+      background-color: config.$color-light-gray;
       transition: transform 0.3s;
 
       &:hover,
       &.swiper-pagination-bullet-active {
-        border: 1px solid config.$color-dark-base;
+        border: 1px solid config.$color-base-dark;
         background-color: config.$color-blue-base;
         transform: scale(1.5);
       }
@@ -39,9 +39,12 @@
     .swiper {
       .swiper-pagination.swiper-pagination-bullets {
         .swiper-pagination-bullet {
+          border: 1px solid config.$color-base-dark-theme;
+
           &:hover,
           &.swiper-pagination-bullet-active {
-            background-color: config.$color-gray;
+            border: 1px solid config.$color-base-dark-theme;
+            background-color: config.$color-base-inverted-dark-theme;
           }
         }
       }

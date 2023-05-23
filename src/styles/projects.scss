@@ -70,3 +70,33 @@
     }
   }
 }
+
+/* Dark Mode */
+.landing-page {
+  &.dark-mode {
+    .projects {
+      background-color: config.$color-base-dark-theme;
+
+      .projects-wrapper {
+        .project-card {
+          border: 1px solid config.$color-base-inverted-dark-theme;
+
+          .name {
+            h3 {
+              color: config.$color-base-inverted-dark-theme;
+            }
+          }
+
+          .links {
+            a {
+              &:hover,
+              &:focus {
+                color: config.$color-base-inverted-dark-theme;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

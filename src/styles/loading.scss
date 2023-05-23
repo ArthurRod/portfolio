@@ -25,3 +25,14 @@
     }
   }
 }
+
+/* Dark Mode */
+.landing-page {
+  &.dark-mode {
+    .loading {
+      .loading-spinner {
+        border: 3px solid config.$color-light-gray;
+      }
+    }
+  }
+}

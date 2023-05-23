@@ -27,7 +27,7 @@
 .landing-page {
   &.dark-mode {
     .skills {
-      background-color: config.$color-base-dark-theme;
+      background-color: config.$color-base;
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
     }

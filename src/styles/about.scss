@@ -41,3 +41,12 @@
     }
   }
 }
+
+/* Dark Mode */
+.landing-page {
+  &.dark-mode {
+    .about {
+      background-color: config.$color-base-dark-theme;
+    }
+  }
+}
