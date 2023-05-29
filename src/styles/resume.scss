@@ -42,39 +42,27 @@
       width: 1100px;
     }
 
+    .image-infos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      padding: 15px;
+
+      /* Desktop */
+      @media screen and (min-width: config.$media-tablet-xs) {
+        flex-direction: row;
+      }
+    }
+
     .image {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 260px;
-      height: 260px;
       overflow: hidden;
-      border-radius: 50%;
-      border: 1px solid config.$color-base;
-      box-shadow: 0 0 10px rgb(0 0 0 / 20%);
       transition: all ease-in-out 0.3s;
-
-      /* Mobile M */
-      @media screen and (min-width: config.$media-mobile-m) and (max-width: config.$media-tablet-xs) {
-        width: 290px;
-        height: 290px;
-      }
-
-      /* Only tablets */
-      @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
-        width: 215px;
-        height: 215px;
-      }
-
-      /* Desktop */
-      @media screen and (min-width: config.$media-desktop-sm) {
-        width: 290px;
-        height: 290px;
-
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
+      border-radius: 10px;
 
       img {
         width: 225px;
@@ -203,24 +191,17 @@
       background-attachment: fixed;
 
       .container {
-        .image {
-          backdrop-filter: blur(5px);
-          -webkit-backdrop-filter: blur(5px);
-          border: 1px solid config.$color-base-inverted-dark-theme;
+        .image-infos {
+          /* Desktop */
+          @media screen and (min-width: config.$media-desktop-sm) {
+            border-radius: 10px;
+            background-color: transparent;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+          }
         }
 
         .infos {
-          border-radius: 10px;
-          background-color: transparent;
-
-          /* Desktop */
-          @media screen and (min-width: config.$media-desktop-sm) {
-            box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid config.$color-base-inverted-dark-theme;
-          }
-
           .name-position {
             text-shadow: 2px 2px config.$color-base-inverted-dark-theme;
           }
@@ -238,22 +219,6 @@
                   opacity: 0.8;
                 }
               }
-            }
-          }
-
-          .social-medias {
-            background-color: config.$color-light-gray;
-            box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid config.$color-base-inverted-dark-theme;
-            border-radius: 10px;
-
-            /* Desktop */
-            @media screen and (min-width: config.$media-desktop-sm) {
-              box-shadow: none;
-              backdrop-filter: unset;
-              -webkit-backdrop-filter: unset;
             }
           }
         }

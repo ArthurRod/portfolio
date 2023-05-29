@@ -47,7 +47,7 @@
     transition: all ease-in-out 0.3s;
 
     h4 {
-      color: config.$color-blue-base;
+      color: config.$color-light-gray;
       font-size: 1.2rem;
 
       /* Mobile M */
@@ -97,14 +97,3 @@
 }
 
 /* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .skill-card {
-      .skill-name {
-        h4 {
-          color: config.$color-light-gray;
-        }
-      }
-    }
-  }
-}

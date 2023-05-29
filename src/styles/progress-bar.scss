@@ -23,21 +23,10 @@
       width: 35px;
       height: 35px;
       border-radius: 50%;
-      color: config.$color-blue-base;
+      color: config.$color-light-gray;
       background-color: config.$color-base;
     }
   }
 }
 
 /* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .progress-bar-wrapper {
-      .progress-bar {
-        label {
-          color: config.$color-light-gray;
-        }
-      }
-    }
-  }
-}

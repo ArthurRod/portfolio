@@ -140,8 +140,8 @@
           align-items: center;
           gap: 10px;
           text-decoration: none;
-          color: config.$color-blue-base;
           transition: all ease-in-out 0.3s;
+          color: config.$color-light-gray;
           cursor: pointer;
 
           .menu-name {
@@ -223,8 +223,6 @@
         ul {
           li {
             a {
-              color: config.$color-base-inverted-dark-theme;
-
               .menu-name {
                 background-color: config.$color-base-dark-theme;
 
@@ -234,8 +232,6 @@
                 }
 
                 .content {
-                  color: config.$color-light-gray;
-                  background-color: config.$color-base;
                   border: 1px solid config.$color-base-inverted-dark-theme;
                 }
               }

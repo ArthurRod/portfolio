@@ -6,12 +6,9 @@
   justify-content: center;
   gap: 10px;
   list-style: none;
-  background-color: transparent;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
 
   /* Desktop */
-  @media screen and (min-width: config.$media-desktop-sm) {
+  @media screen and (min-width: config.$media-tablet-xs) {
     justify-content: flex-start;
   }
 
@@ -27,8 +24,9 @@
 .landing-page {
   &.dark-mode {
     .social-medias {
-      backdrop-filter: unset;
-      -webkit-backdrop-filter: unset;
+      background-color: config.$color-light-gray;
+      box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+      border-radius: 10px;
     }
   }
 }

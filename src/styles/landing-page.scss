@@ -31,7 +31,7 @@
 
     h2 {
       @include config.font-title;
-      color: config.$color-blue-base;
+      color: config.$color-light-gray;
 
       /* Desktop */
       @media screen and (min-width: config.$media-desktop-sm) {
@@ -47,12 +47,6 @@
     .section-title {
       h2 {
         color: config.$color-light-gray;
-      }
-    }
-
-    .section-title-inverted {
-      h2 {
-        color: config.$color-base-inverted-dark-theme;
       }
     }
   }
