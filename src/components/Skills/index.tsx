@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
+import { useTranslation } from "react-i18next";
 
 import { Skill } from "../../types/Skill";
 import { SkillCard } from "../SkillCard";
@@ -36,6 +37,8 @@ const breakpointsConfig = {
 };
 
 export function Skills({ skills }: SkillsProps) {
+  const { t } = useTranslation();
+
   return (
     <section
       id="skills"
@@ -49,7 +52,7 @@ export function Skills({ skills }: SkillsProps) {
           aria-label="Título da Seção de Habilidades"
           data-animate="left"
         >
-          <h2>Habilidades</h2>
+          <h2>{t("titles.skills")}</h2>
         </div>
         <Swiper
           breakpoints={breakpointsConfig}

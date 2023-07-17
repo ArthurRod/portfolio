@@ -1,0 +1,42 @@
+{
+  "translation": {
+    "shortDescription": "Engenheiro de Software formado pela Unicesumar e desenvolvedor Front-End Web. Há mais de dois anos atuando com implantação e manutenção de e-commerce VTEX IO e VTEX CMS utilizando as tecnologias React, TypeScript, JavaScript, HTML5, CSS3 e Sass pela agência <link1/> uma empresa subsidiária da <link2/>.",
+    "menuTexts": {
+      "resume": "Resumo",
+      "about": "Sobre mim",
+      "skills": "Habilidades",
+      "projects": "Projetos",
+      "contact": "Contato"
+    },
+    "titles": {
+      "about": "Sobre mim",
+      "skills": "Habilidades",
+      "projects": "Principais projetos",
+      "contact": "Contato"
+    },
+    "aboutText": "Meu nome é Arthur, e desde criança sempre fui apaixonado por tecnologia. Aos quatorze anos, decidi fazer um curso de técnico em montagem e manutenção de computadores. No entanto, após me formar em 2013, acabei desanimando com esse mercado de trabalho e desisti de continuar os estudos na área. \n\n Sem saber qual carreira seguir, em 2016 tive que iniciar no mercado de trabalho. Trabalhei por alguns anos como auxiliar de serviços gerais em um supermercado da minha cidade, mas por estar fazendo algo que eu não gostava, eu pensava muito a respeito do meu futuro. Isso me levou a dedicar mais para descobrir qual carreira seguir. Depois de um tempo, cheguei à conclusão de que, mesmo o mercado de hardware não fornecendo o futuro que eu desejava, eu poderia recorrer ao mercado de software. Em 2019, resolvi iniciar a faculdade de engenharia de software. \n\n Hoje, após quatro anos, sou formado em engenharia de software e atuo como desenvolvedor front-end web há dois anos. A cada dia que passa, tenho mais certeza que fiz a escolha certa. Às vezes, sinto que deveria ter começado antes, mas os erros que cometi me ensinaram muitas coisas valiosas. Eles me trouxeram até aqui, e por isso, sou grato a Deus.",
+    "skillLevelLabel": "Nível de habilidade",
+    "projects": {
+      "project1Description": "Este projeto já havia sido desenvolvido anteriormente. No entanto, devido a alguns motivos, foi necessário refaze-lo. Foram utilizados componentes padrão VTEX IO, e alguns componentes personalizados com REACT e Typescript. A estilização foi feita utilizando CSS.",
+      "project2Description": "E-commerce desenvolvido utilizando componentes padrão VTEX IO, e alguns componentes personalizados com REACT e Typescript. A estilização foi feita utilizando CSS."
+    },
+    "projectLinkLabel": "Link do projeto: ",
+    "gitHubLinkLabel": "Link do GitHub: ",
+    "contactForm": {
+      "labels": {
+        "name": "Nome *",
+        "message": "Mensagem *"
+      },
+      "placeholders": {
+        "name": "Digite seu nome",
+        "email": "Digite seu e-mail",
+        "message": "Digite a mensagem"
+      },
+      "genericError": "Ocorreu um erro ao enviar a mensagem!",
+      "errorFiels": "Preencha todos os campos!",
+      "succes": "Mensagem enviada!",
+      "button": "Enviar"
+    },
+    "contactOrLabel": "Ou"
+  }
+}

@@ -1,11 +1,14 @@
 import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
-import "../../styles/contact.scss";
 import { WhatsappLogo, X } from "phosphor-react";
+import { useTranslation } from "react-i18next";
+
 import { Loading } from "../Loading";
 
+import "../../styles/contact.scss";
+
 export function Contact() {
+  const { t } = useTranslation();
   const form = useRef<HTMLFormElement | null>(null);
 
   const [name, setName] = useState("");
@@ -19,13 +22,13 @@ export function Contact() {
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
 
-    if (
-      name.trim() === "" ||
-      email.trim() === "" ||
-      message.trim() === "" ||
-      !form.current
-    ) {
-      setError("Preencha todos os campos!");
+    if (!form.current) return;
+
+    const isAnyEmptyInput =
+      name.trim() === "" || email.trim() === "" || message.trim() === "";
+
+    if (isAnyEmptyInput) {
+      setError(t("contactForm.errorFiels"));
       return;
     }
 
@@ -39,15 +42,15 @@ export function Contact() {
         "k-pOQCAg85h1Zsuv6"
       )
       .then(
-        (result) => {
+        () => {
+          setSuccess(t("contactForm.succes"));
+
           setName("");
           setEmail("");
           setMessage("");
-          setSuccess("Mensagem enviada!");
-          console.log(result.text);
         },
         (error) => {
-          setError("Ocorreu um erro ao enviar a mensagem!");
+          setError(t("contactForm.genericError"));
           console.log(error.text);
         }
       )
@@ -67,17 +70,17 @@ export function Contact() {
           aria-label="Título da Seção de Contato"
           data-animate="left"
         >
-          <h2>Contato</h2>
+          <h2>{t("titles.contact")}</h2>
         </div>
         <div className="content" data-animate="bottom">
           <form ref={form} onSubmit={(e) => sendEmail(e)}>
-            <label>Nome *</label>
+            <label>{t("contactForm.labels.name")}</label>
             <input
               type="text"
               name="user_name"
               onChange={(e) => setName(e.target.value)}
               value={name}
-              placeholder="Digite seu nome"
+              placeholder={t("contactForm.placeholders.name")}
               required
             />
             <label>E-mail *</label>
@@ -86,20 +89,20 @@ export function Contact() {
               name="user_email"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
-              placeholder="Digite seu e-mail"
+              placeholder={t("contactForm.placeholders.email")}
               required
             />
-            <label>Mensagem *</label>
+            <label>{t("contactForm.labels.message")}</label>
             <textarea
               name="message"
               onChange={(e) => setMessage(e.target.value)}
               value={message}
-              placeholder="Digite a mensagem"
+              placeholder={t("contactForm.placeholders.message")}
               maxLength={300}
               required
             />
             <button className="send-btn" type="submit">
-              {loading ? <Loading /> : "Enviar"}
+              {loading ? <Loading /> : t("contactForm.button")}
             </button>
           </form>
           {error.length > 0 && (
@@ -118,7 +121,7 @@ export function Contact() {
               </button>
             </div>
           )}
-          <span className="option">ou</span>
+          <span className="option">{t("contactOrLabel")}</span>
           <a
             className="whatsapp-btn"
             href="https://wa.me/5531998226668"

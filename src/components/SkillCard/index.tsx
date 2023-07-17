@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { ProgressBar } from "../ProgressBar";
 
 interface SkillCardProps {
@@ -11,6 +13,8 @@ export function SkillCard({
   skillName,
   skillPercentage,
 }: SkillCardProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="skill-card" aria-label={`Habilidade ${skillName}`}>
       <div className="skill-image" role="img" aria-label="Imagem da tecnologia">
@@ -20,7 +24,7 @@ export function SkillCard({
         <h4>{skillName}</h4>
       </div>
       <div className="progress-title" aria-label="Nível de habilidade">
-        <span>Nível de habilidade</span>
+        <span>{t("skillLevelLabel")}</span>
       </div>
       <ProgressBar percentage={skillPercentage} />
     </div>

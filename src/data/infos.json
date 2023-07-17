@@ -108,25 +108,14 @@
   ],
   "projects": [
     {
-      "name": "Sipolatti",
-      "description": "E-commerce desenvolvido utilizando componentes padrão VTEX IO, e alguns componentes personalizados com REACT e Typescript. A estilização foi feita utilizando CSS.",
-      "link": "https://www.sipolatti.com.br",
-      "print": "./src/assets/png/projeto-sipolatti-vtexio.png",
-      "printMobile": "./src/assets/png/projeto-sipolatti-vtexio-mobile.png"
-    },
-    {
-      "name": "Fretta",
-      "description": "E-commerce desenvolvido utilizando componentes padrão VTEX IO, e alguns componentes personalizados com REACT e Typescript. A estilização foi feita utilizando CSS.",
-      "link": "https://www.frettahome.com.br",
-      "print": "./src/assets/png/projeto-fretta-vtexio.png",
-      "printMobile": "./src/assets/png/projeto-fretta-vtexio-mobile.png"
-    },
-    {
-      "name": "N.A.V.E.",
-      "description": "Este projeto já havia sido desenvolvido anteriormente. No entanto, devido a alguns motivos, foi necessário refazer a parte dos componentes e a parte de estilização. Também foram utilizados componentes padrão VTEX IO, e alguns componentes personalizados com REACT e Typescript. A estilização foi feita utilizando CSS.",
       "link": "https://www.navegamer.com.br",
       "print": "./src/assets/png/projeto-nave-vtexio.png",
       "printMobile": "./src/assets/png/projeto-nave-vtexio-mobile.png"
+    },
+    {
+      "link": "https://www.sipolatti.com.br",
+      "print": "./src/assets/png/projeto-sipolatti-vtexio.png",
+      "printMobile": "./src/assets/png/projeto-sipolatti-vtexio-mobile.png"
     }
   ]
 }

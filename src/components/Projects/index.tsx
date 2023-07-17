@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { Project } from "../../types/Project";
 import ProjectCard from "../ProjectCard";
 
@@ -8,6 +10,8 @@ interface ProjectsProps {
 import "../../styles/projects.scss";
 
 export default function Projects({ projects }: ProjectsProps) {
+  const { t } = useTranslation();
+
   return (
     <section
       id="projects"
@@ -21,7 +25,7 @@ export default function Projects({ projects }: ProjectsProps) {
           aria-label="Título da seção de projetos"
           data-animate="left"
         >
-          <h2>Principais projetos</h2>
+          <h2>{t("titles.projects")}</h2>
         </div>
         <div
           className="projects-wrapper"
@@ -29,12 +33,11 @@ export default function Projects({ projects }: ProjectsProps) {
           data-animate="top"
         >
           {projects.map((project, index) => {
-            const { name, description, link, githubLink, print } = project;
+            const { link, githubLink, print } = project;
             return (
               <ProjectCard
                 key={index}
-                projectName={name}
-                projectDescription={description}
+                index={index}
                 projectLink={link}
                 projectGithubLink={githubLink}
                 projectPrint={print}

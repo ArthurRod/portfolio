@@ -1,0 +1,42 @@
+{
+  "translation": {
+    "shortDescription": "Software Engineer graduated from Unicesumar and Front-End Web developer. For over two years, I have been working with the implementation and maintenance of VTEX IO and VTEX CMS e-commerce using technologies such as React, TypeScript, JavaScript, HTML5, CSS3, and Sass at <link1/>, a subsidiary company of <link2/>.",
+    "menuTexts": {
+      "resume": "Resume",
+      "about": "About me",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "titles": {
+      "about": "About me",
+      "skills": "Skills",
+      "projects": "Main projects",
+      "contact": "Contact"
+    },
+    "aboutText": "My name is Arthur, and since childhood, I have always been passionate about technology. At the age of fourteen, I decided to take a course in computer assembly and maintenance. However, after graduating in 2013, I became disheartened with the job market and gave up on continuing my studies in the field.\n\nNot knowing which career path to follow, I had to enter the job market in 2016. I worked for several years as a general services assistant at a supermarket in my city, but because I was doing something I didn't enjoy, I often pondered my future. This led me to dedicate myself more to discovering which career to pursue. After some time, I came to the conclusion that even though the hardware market didn't offer the future I desired, I could turn to the software market. In 2019, I decided to start studying software engineering at university.\n\nToday, after four years, I have graduated in software engineering and have been working as a front-end web developer for two years. With each passing day, I become more certain that I made the right choice. Sometimes, I feel like I should have started earlier, but the mistakes I made taught me many valuable lessons. They brought me to where I am today, and for that, I am grateful to God.",
+    "skillLevelLabel": "Skill level",
+    "projects": {
+      "project1Description": "This project had already been developed before. However, due to certain reasons, it needed to be redone. Standard VTEX IO components were used, along with some custom components built with React and TypeScript. The styling was done using CSS.",
+      "project2Description": "An e-commerce was developed using standard VTEX IO components, along with some custom components built with React and TypeScript. The styling was done using CSS."
+    },
+    "projectLinkLabel": "Project link: ",
+    "gitHubLinkLabel": "GitHub link: ",
+    "contactForm": {
+      "labels": {
+        "name": "Name *",
+        "message": "Message *"
+      },
+      "placeholders": {
+        "name": "Enter your name",
+        "email": "Enter your e-mail",
+        "message": "Enter your message"
+      },
+      "genericError": "An error occurred while sending the message!",
+      "errorFiels": "Please fill in all the fields!",
+      "succes": "Message sent!",
+      "button": "Send"
+    },
+    "contactOrLabel": "Or"
+  }
+}

@@ -1,4 +1,5 @@
 import { Code, House, Moon, User, Palette, Phone } from "phosphor-react";
+import { useTranslation } from "react-i18next";
 
 import { scrollPage } from "../../helpers/onScroll";
 import { SwitchButton } from "../../components/SwitchButton";
@@ -14,6 +15,8 @@ export function AsideNavigatorMenu({
   darkMode,
   setDarkMode,
 }: AsideNavigatorMenuProps) {
+  const { t } = useTranslation();
+
   function handleDarkMode() {
     if (!darkMode) {
       setDarkMode(true);
@@ -41,7 +44,7 @@ export function AsideNavigatorMenu({
               <House size={32} />
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
-                  <span>Resumo</span>
+                  <span>{t("menuTexts.resume")}</span>
                 </div>
               </div>
             </a>
@@ -51,7 +54,7 @@ export function AsideNavigatorMenu({
               <User size={32} />
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
-                  <span>Sobre mim</span>
+                  <span>{t("menuTexts.about")}</span>
                 </div>
               </div>
             </a>
@@ -61,7 +64,7 @@ export function AsideNavigatorMenu({
               <Code size={32} />
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
-                  <span>Habilidades</span>
+                  <span>{t("menuTexts.skills")}</span>
                 </div>
               </div>
             </a>
@@ -71,7 +74,7 @@ export function AsideNavigatorMenu({
               <Palette size={32} />
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
-                  <span>Projetos</span>
+                  <span>{t("menuTexts.projects")}</span>
                 </div>
               </div>
             </a>
@@ -81,7 +84,7 @@ export function AsideNavigatorMenu({
               <Phone size={32} />
               <div className="menu-name" aria-label="Nome do menu">
                 <div className="content">
-                  <span>Contato</span>
+                  <span>{t("menuTexts.contact")}</span>
                 </div>
               </div>
             </a>

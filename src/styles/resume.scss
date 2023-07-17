@@ -107,50 +107,69 @@
       .name-position {
         text-shadow: 2px 2px config.$color-blue-base;
 
-        .name,
-        .position {
-          h2 {
-            @include config.font-subtitle;
-            font-size: 1.8rem;
-            text-align: center;
+        .name h2,
+        .position h3 {
+          @include config.font-subtitle;
+          font-size: 1.8rem;
+          text-align: center;
 
-            /* Mobile M */
-            @media screen and (min-width: config.$media-mobile-m) {
-              font-size: 2rem;
-            }
+          /* Mobile M */
+          @media screen and (min-width: config.$media-mobile-m) {
+            font-size: 2rem;
+          }
 
-            /* Tablet */
-            @media screen and (min-width: config.$media-tablet-xs) {
-              font-size: 2.2rem;
-              text-align: left;
-            }
+          /* Tablet */
+          @media screen and (min-width: config.$media-tablet-xs) {
+            font-size: 2.2rem;
+            text-align: left;
+          }
 
-            /* Desktop */
-            @media screen and (min-width: config.$media-desktop-sm) {
-              font-size: 2.4rem;
-            }
+          /* Desktop */
+          @media screen and (min-width: config.$media-desktop-sm) {
+            font-size: 2.4rem;
           }
         }
 
         .name {
           h1 {
+            opacity: 0;
             font-size: 2.6rem;
             text-align: center;
 
+            &::after {
+              content: "|";
+              margin-left: 5px;
+              opacity: 1;
+              animation: intervalReveal 0.7s infinite;
+            }
+
             /* Mobile M */
             @media screen and (min-width: config.$media-mobile-m) {
-              font-size: 3rem;
+              min-height: 97px;
+              font-size: 4rem;
             }
 
             /* Tablet */
             @media screen and (min-width: config.$media-tablet-xs) {
-              font-size: 4rem;
+              min-height: 121px;
+              font-size: 5rem;
               text-align: left;
             }
 
             /* Desktop */
             @media screen and (min-width: config.$media-desktop-sm) {
-              font-size: 6rem;
+              min-height: 193px;
+              font-size: 8rem;
+            }
+
+            @keyframes intervalReveal {
+              0%,
+              100% {
+                opacity: 1;
+              }
+              50% {
+                opacity: 0;
+              }
             }
           }
         }

@@ -37,18 +37,10 @@
         }
       }
 
-      .prints {
-        ul {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-
-          li {
-            img {
-              border-radius: 10px;
-              width: 100%;
-            }
-          }
+      .print {
+        img {
+          border-radius: 10px;
+          width: 100%;
         }
       }
 
