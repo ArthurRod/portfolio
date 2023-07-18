@@ -2,28 +2,13 @@ import { Code, House, Moon, User, Palette, Phone } from "phosphor-react";
 import { useTranslation } from "react-i18next";
 
 import { scrollPage } from "../../helpers/onScroll";
+import { activateDarkMode } from "../../helpers/activateDarkMode";
 import { SwitchButton } from "../../components/SwitchButton";
 
 import "../../styles/aside-navigator-menu.scss";
 
-interface AsideNavigatorMenuProps {
-  darkMode: boolean;
-  setDarkMode: (darkMode: boolean) => void;
-}
-
-export function AsideNavigatorMenu({
-  darkMode,
-  setDarkMode,
-}: AsideNavigatorMenuProps) {
+export function AsideNavigatorMenu() {
   const { t } = useTranslation();
-
-  function handleDarkMode() {
-    if (!darkMode) {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-  }
 
   return (
     <aside
@@ -32,9 +17,12 @@ export function AsideNavigatorMenu({
       aria-label="Menu de navegação lateral"
     >
       <div className="controls">
-        <div className="dark-mode" aria-label="Ativar modo noturno">
+        <div
+          className="dark-mode-switch-button"
+          aria-label="Ativar modo noturno"
+        >
           <Moon size={32} />
-          <SwitchButton action={handleDarkMode} />
+          <SwitchButton action={activateDarkMode} />
         </div>
       </div>
       <nav aria-label="Menus">

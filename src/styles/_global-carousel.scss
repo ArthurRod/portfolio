@@ -1,8 +1,9 @@
 @use "./config";
 
+/* Global Carousel */
 .swiper {
   .swiper-wrapper {
-    padding-bottom: 30px;
+    padding-bottom: 3rem;
   }
 
   .swiper-pagination.swiper-pagination-bullets {
@@ -12,20 +13,20 @@
     flex-wrap: wrap;
 
     &.swiper-pagination-horizontal {
-      height: 30px;
+      height: 3rem;
       bottom: 0;
     }
 
     .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      border: 1px solid config.$color-base-dark;
+      width: 1rem;
+      height: 1rem;
+      border: 0.1rem solid config.$color-base-dark;
       background-color: config.$color-light-gray;
       transition: transform 0.3s;
 
       &:hover,
       &.swiper-pagination-bullet-active {
-        border: 1px solid config.$color-base-dark;
+        border: 0.1rem solid config.$color-base-dark;
         background-color: config.$color-blue-base;
         transform: scale(1.5);
       }
@@ -33,19 +34,17 @@
   }
 }
 
-/* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .swiper {
-      .swiper-pagination.swiper-pagination-bullets {
-        .swiper-pagination-bullet {
-          border: 1px solid config.$color-base-dark-theme;
+/* Global Carousel Dark Mode */
+.dark-mode {
+  .swiper {
+    .swiper-pagination.swiper-pagination-bullets {
+      .swiper-pagination-bullet {
+        border: 0.1rem solid config.$color-base-dark-theme;
 
-          &:hover,
-          &.swiper-pagination-bullet-active {
-            border: 1px solid config.$color-base-dark-theme;
-            background-color: config.$color-base-inverted-dark-theme;
-          }
+        &:hover,
+        &.swiper-pagination-bullet-active {
+          border: 0.1rem solid config.$color-base-dark-theme;
+          background-color: config.$color-base-inverted-dark-theme;
         }
       }
     }

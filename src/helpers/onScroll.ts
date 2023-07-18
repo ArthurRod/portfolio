@@ -6,27 +6,22 @@ export function scrollAnimateElements() {
   ) as NodeListOf<HTMLElement>;
   const windowTop = window.scrollY + (window.innerHeight * 3) / 4;
 
-  if (targets && targets.length > 0) {
-    for (const target of targets) {
+  if (targets.length > 0) {
+    targets.forEach((target) => {
       if (windowTop > target.offsetTop) {
         target.classList.add("animate");
       } else {
         target.classList.remove("animate");
       }
-    }
+    });
   }
 }
 
 export function scrollPage(path: string) {
   const element = document.getElementById(path);
-  const screenWidth = window.screen.width;
 
   if (element) {
-    if (screenWidth > 768) {
-      window.scrollTo(0, element.offsetTop);
-    } else {
-      window.scrollTo(0, element.offsetTop);
-    }
+    window.scrollTo(0, element.offsetTop);
   }
 }
 
@@ -38,7 +33,7 @@ export function headerShowMobile() {
   const element = document.getElementById("aside-navigator-menu");
 
   if (element) {
-    var actualScrollTop = window.scrollY;
+    const actualScrollTop = window.scrollY;
 
     if (actualScrollTop > lastScrollTop) {
       element.classList.add("active");
@@ -50,7 +45,9 @@ export function headerShowMobile() {
   }
 }
 
-window.addEventListener("scroll", () => {
+function handleScroll() {
   scrollAnimateElements();
   headerShowMobile();
-});
+}
+
+window.addEventListener("scroll", handleScroll);

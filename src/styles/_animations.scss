@@ -18,17 +18,17 @@
 }
 
 [data-animate="top"] {
-  transform: translate3d(0px, -50px, 0px);
+  transform: translate3d(0px, -5rem, 0px);
 }
 
 [data-animate="bottom"] {
-  transform: translate3d(0px, 50px, 0px);
+  transform: translate3d(0px, 5rem, 0px);
 }
 
 [data-animate="left"] {
-  transform: translate3d(-50px, 0px, 0px);
+  transform: translate3d(-5rem, 0px, 0px);
 }
 
 [data-animate="right"] {
-  transform: translate3d(50px, 0px, 0px);
+  transform: translate3d(5rem, 0px, 0px);
 }

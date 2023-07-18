@@ -1,25 +1,26 @@
 @use "./config";
 
+/* About */
 .about {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-color: config.$color-base;
 
   /* Desktop */
   @media screen and (min-width: config.$media-desktop) {
     margin-top: 100vh;
-    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
   }
 
   .container {
     display: flex;
     flex-direction: column-reverse;
-    gap: 30px;
+    gap: 3rem;
 
     /* Desktop */
     @media screen and (min-width: config.$media-desktop) {
       flex-direction: row;
-      gap: 50px;
+      gap: 5rem;
     }
   }
 
@@ -42,11 +43,9 @@
   }
 }
 
-/* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .about {
-      background-color: config.$color-base-dark-theme;
-    }
+/* About Dark Mode */
+.dark-mode {
+  .about {
+    background-color: config.$color-base;
   }
 }

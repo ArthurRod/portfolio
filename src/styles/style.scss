@@ -1,7 +1,7 @@
 @use "./config";
 @use "./animations";
 
-/* RESET */
+/* Reset */
 :root {
   font-size: 62.5%;
 }
@@ -26,7 +26,7 @@ body.dark-mode {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 1rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -58,14 +58,64 @@ a:focus {
   outline: 0;
 }
 
-/* GLOBAL CLASSES */
+/* Global Classes */
 .container {
-  max-width: calc(100% - 30px);
+  max-width: calc(100% - 3rem);
   margin: 0px auto;
   width: 100%;
 
   @media screen and (min-width: config.$media-desktop) {
-    width: 1270px;
-    padding-left: 130px;
+    width: 127rem;
+    padding-left: 13rem;
+  }
+}
+
+.main-page {
+  transition: all ease-in-out 0.3s;
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop-sm) {
+    margin-top: 0px;
+  }
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  h2 {
+    @include config.font-title;
+    color: config.$color-base-dark;
+
+    /* Desktop */
+    @media screen and (min-width: config.$media-desktop-sm) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.section-title-inverted {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  h2 {
+    @include config.font-title;
+    color: config.$color-light-gray;
+
+    /* Desktop */
+    @media screen and (min-width: config.$media-desktop-sm) {
+      font-size: 3rem;
+    }
+  }
+}
+
+/* Global Classes Dark Mode*/
+.dark-mode {
+  .section-title {
+    h2 {
+      color: config.$color-light-gray;
+    }
   }
 }

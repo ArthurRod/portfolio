@@ -1,5 +1,6 @@
 @use "./config";
 
+/* Loading */
 .loading {
   display: flex;
   justify-content: center;
@@ -8,10 +9,10 @@
   height: 100%;
 
   .loading-spinner {
-    width: 30px;
-    height: 30px;
-    border: 3px solid config.$color-base;
-    border-top: 3px solid transparent;
+    width: 3rem;
+    height: 3rem;
+    border: 0.3rem solid config.$color-base;
+    border-top: 0.3rem solid transparent;
     border-radius: 50%;
     animation: spinner 1.5s linear infinite;
   }
@@ -26,13 +27,11 @@
   }
 }
 
-/* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .loading {
-      .loading-spinner {
-        border: 3px solid config.$color-light-gray;
-      }
+/* Loading Dark Mode */
+.dark-mode {
+  .loading {
+    .loading-spinner {
+      border: 0.3rem solid config.$color-light-gray;
     }
   }
 }

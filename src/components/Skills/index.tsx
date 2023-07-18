@@ -39,6 +39,35 @@ const breakpointsConfig = {
 export function Skills({ skills }: SkillsProps) {
   const { t } = useTranslation();
 
+  const skillDescriptions = t("skillDescriptions", {
+    returnObjects: true,
+  }) as string[];
+
+  const skillDescriptionsLi = (): JSX.Element[] => {
+    const skillDescriptionsLiArray = skillDescriptions.map(
+      (skillDescription, index) => {
+        const delimiter = "=>";
+        const name = skillDescription.slice(
+          0,
+          skillDescription.indexOf(delimiter)
+        );
+        const description = skillDescription.slice(
+          skillDescription.indexOf(delimiter),
+          skillDescription.length
+        );
+
+        return (
+          <li key={index}>
+            <b>{name}</b>
+            <span>{description}</span>
+          </li>
+        );
+      }
+    );
+
+    return skillDescriptionsLiArray;
+  };
+
   return (
     <section
       id="skills"
@@ -81,6 +110,9 @@ export function Skills({ skills }: SkillsProps) {
             );
           })}
         </Swiper>
+        <div className="skill-descriptions" data-animate="right">
+          <ul>{skillDescriptionsLi()}</ul>
+        </div>
       </div>
     </section>
   );

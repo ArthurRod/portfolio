@@ -16,9 +16,27 @@
     },
     "aboutText": "My name is Arthur, and since childhood, I have always been passionate about technology. At the age of fourteen, I decided to take a course in computer assembly and maintenance. However, after graduating in 2013, I became disheartened with the job market and gave up on continuing my studies in the field.\n\nNot knowing which career path to follow, I had to enter the job market in 2016. I worked for several years as a general services assistant at a supermarket in my city, but because I was doing something I didn't enjoy, I often pondered my future. This led me to dedicate myself more to discovering which career to pursue. After some time, I came to the conclusion that even though the hardware market didn't offer the future I desired, I could turn to the software market. In 2019, I decided to start studying software engineering at university.\n\nToday, after four years, I have graduated in software engineering and have been working as a front-end web developer for two years. With each passing day, I become more certain that I made the right choice. Sometimes, I feel like I should have started earlier, but the mistakes I made taught me many valuable lessons. They brought me to where I am today, and for that, I am grateful to God.",
     "skillLevelLabel": "Skill level",
+    "skillDescriptions": [
+      "React => It is an open-source JavaScript library used to build user interfaces in web applications.",
+      "TypeScript => It is a superset of the JavaScript language that adds static typing features.",
+      "JavaScript => It is a high-level, interpreted, and object-oriented programming language.",
+      "VTEX IO => It is a cloud-based development and hosting platform for e-commerce.",
+      "React Native => It is a mobile app development framework that allows you to create native apps for iOS and Android using JavaScript.",
+      "Node.js => It is a JavaScript runtime environment that allows you to run JavaScript code on the server-side.",
+      "npm => It is the default package manager for the Node.js runtime environment.",
+      "MySQL => It is an open-source relational database management system.",
+      "GitHub => It is a source code hosting and collaboration platform.",
+      "HTML5 => It is the latest version of the standard markup language for creating web pages.",
+      "CSS3 => It is the latest version of the cascading style sheet language used to style HTML elements.",
+      "SCSS (Sassy CSS) => It is a CSS extension that offers advanced features.",
+      "Tailwind CSS => It is a utility-first CSS framework that provides a set of ready-to-use classes.",
+      "Styled Components => It is a library that allows you to write CSS styles directly in React components.",
+      "Java => It is a general-purpose, object-oriented programming language.",
+      "C++ => It is a general-purpose, high-performance programming language."
+    ],
     "projects": {
-      "project1Description": "This project had already been developed before. However, due to certain reasons, it needed to be redone. Standard VTEX IO components were used, along with some custom components built with React and TypeScript. The styling was done using CSS.",
-      "project2Description": "An e-commerce was developed using standard VTEX IO components, along with some custom components built with React and TypeScript. The styling was done using CSS."
+      "project1Description": "Computer store and computer accessories, this project had already been developed previously. However, due to some reasons, it was necessary to redo it. \n\n Technologies used: VTEX IO, React, TypeScript, Node.js and CSS",
+      "project2Description": "Home appliances and furniture store. \n\n Technologies used: VTEX IO, React, TypeScript, Node.js and CSS"
     },
     "projectLinkLabel": "Project link: ",
     "gitHubLinkLabel": "GitHub link: ",

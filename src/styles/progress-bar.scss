@@ -1,14 +1,15 @@
 @use "./config";
 
+/* Progress Bar */
 .progress-bar-wrapper {
-  border-radius: 10px;
-  margin-bottom: 10px;
-  border: 1px solid config.$color-base;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid config.$color-base;
 
   .progress-bar {
     position: relative;
-    height: 15px;
-    border-radius: 10px;
+    height: 1.5rem;
+    border-radius: 1rem;
     background-color: config.$color-base;
 
     label {
@@ -17,11 +18,11 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: -10px;
+      top: -1rem;
       right: 0;
       font-size: 1rem;
-      width: 35px;
-      height: 35px;
+      width: 3.5rem;
+      height: 3.5rem;
       border-radius: 50%;
       color: config.$color-light-gray;
       background-color: config.$color-base;
@@ -29,4 +30,4 @@
   }
 }
 
-/* Dark Mode */
+/* Progress Bar Dark Mode */

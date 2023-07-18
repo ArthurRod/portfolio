@@ -1,19 +1,19 @@
 @use "./config";
 
+/* Projects */
 .projects {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-color: config.$color-base;
 
   .projects-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 6rem;
 
     .project-card {
       display: flex;
       flex-direction: column;
-      gap: 30px;
       width: 100%;
 
       ul {
@@ -39,15 +39,27 @@
 
       .print {
         img {
-          border-radius: 10px;
+          border-radius: 1rem;
           width: 100%;
         }
       }
 
+      .description {
+        margin-top: 3rem;
+
+        p {
+          &:not(:first-child) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
       .links {
-        font-weight: 500;
+        font-size: 1.4rem;
+        margin-top: 1rem;
 
         a {
+          font-weight: 500;
           transition: color ease-in-out 0.3s;
 
           &:hover,
@@ -60,20 +72,18 @@
   }
 }
 
-/* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .projects {
-      background-color: config.$color-base-dark-theme;
+/* Projects Dark Mode */
+.dark-mode {
+  .projects {
+    background-color: config.$color-base;
 
-      .projects-wrapper {
-        .project-card {
-          .links {
-            a {
-              &:hover,
-              &:focus {
-                color: config.$color-base-inverted-dark-theme;
-              }
+    .projects-wrapper {
+      .project-card {
+        .links {
+          a {
+            &:hover,
+            &:focus {
+              color: config.$color-base-inverted-dark-theme;
             }
           }
         }

@@ -1,8 +1,9 @@
 @use "./config";
 
+/* Contact */
 .contact {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-color: config.$color-light-gray;
 
   .content {
@@ -13,10 +14,10 @@
     form {
       display: flex;
       flex-direction: column;
-      padding: 15px;
+      padding: 1.5rem;
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+      border-radius: 1rem;
+      box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
       background-color: config.$color-base;
 
       /* Desktop */
@@ -26,25 +27,25 @@
 
       label {
         color: config.$color-light-gray;
-        margin-bottom: 5px;
+        margin-bottom: 0.5rem;
       }
 
       input,
       textarea {
-        height: 40px;
-        margin-bottom: 30px;
-        padding: 5px 5px 0px;
-        border-radius: 5px;
+        height: 4rem;
+        margin-bottom: 3rem;
+        padding: 0.5rem 0.5rem 0px;
+        border-radius: 0.5rem;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
         border: none;
         color: config.$color-light-gray;
         background-color: transparent;
-        border-bottom: 2px solid config.$color-light-gray;
+        border-bottom: 0.2rem solid config.$color-light-gray;
         transition: all ease-in-out 0.3s;
 
         &:focus {
-          padding: 5px;
+          padding: 0.5rem;
           border-color: config.$color-blue-base;
         }
 
@@ -56,19 +57,19 @@
 
       textarea {
         @include config.font-subtitle;
-        min-height: 200px;
+        min-height: 20rem;
       }
 
       .send-btn {
-        height: 40px;
-        width: 250px;
-        border-radius: 10px;
+        height: 4rem;
+        width: 25rem;
+        border-radius: 1rem;
         margin: 0px auto;
         border: none;
         text-transform: uppercase;
         color: config.$color-base;
         background-color: config.$color-light-gray;
-        border: 1px solid transparent;
+        border: 0.1rem solid transparent;
         cursor: pointer;
         transition: all ease-in-out 0.3s;
 
@@ -83,10 +84,10 @@
     .error,
     .success {
       display: flex;
-      gap: 15px;
-      padding: 15px;
-      margin-top: 30px;
-      border-radius: 10px;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      border-radius: 1rem;
 
       button {
         background-color: transparent;
@@ -96,7 +97,7 @@
     }
 
     .error {
-      border: 1px solid config.$color-error;
+      border: 0.1rem solid config.$color-error;
 
       p {
         color: config.$color-error;
@@ -104,7 +105,7 @@
     }
 
     .success {
-      border: 1px solid config.$color-success;
+      border: 0.1rem solid config.$color-success;
 
       p {
         color: config.$color-success;
@@ -115,17 +116,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 1rem;
       width: 50%;
-      margin: 30px 0 30px;
+      margin: 3rem 0 3rem;
       text-transform: uppercase;
       color: config.$color-base;
 
       &::before,
       &::after {
         content: "";
-        width: 100px;
-        height: 2px;
+        width: 10rem;
+        height: 0.2rem;
         background-color: config.$color-base;
       }
     }
@@ -142,50 +143,48 @@
   }
 }
 
-/* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .contact {
-      background-color: config.$color-base;
+/* Contact Dark Mode */
+.dark-mode {
+  .contact {
+    background-color: config.$color-base-dark-theme;
 
-      .content {
-        form {
-          background-color: config.$color-base-dark-theme;
+    .content {
+      form {
+        background-color: config.$color-base;
 
-          input,
-          textarea {
-            &:focus {
-              border-color: config.$color-base-inverted-dark-theme;
-            }
-          }
-
-          .send-btn {
-            color: config.$color-light-gray;
-            background-color: config.$color-base;
-
-            &:hover,
-            &:focus {
-              border-color: config.$color-base-inverted-dark-theme;
-            }
+        input,
+        textarea {
+          &:focus {
+            border-color: config.$color-base-inverted-dark-theme;
           }
         }
 
-        .option {
-          color: config.$color-light-gray;
-
-          &::before,
-          &::after {
-            background-color: config.$color-light-gray;
-          }
-        }
-
-        .whatsapp-btn {
-          color: config.$color-light-gray;
+        .send-btn {
+          color: config.$color-base;
+          background-color: config.$color-light-gray;
 
           &:hover,
           &:focus {
-            color: config.$color-base-inverted-dark-theme;
+            border-color: config.$color-base-inverted-dark-theme;
           }
+        }
+      }
+
+      .option {
+        color: config.$color-light-gray;
+
+        &::before,
+        &::after {
+          background-color: config.$color-light-gray;
+        }
+      }
+
+      .whatsapp-btn {
+        color: config.$color-light-gray;
+
+        &:hover,
+        &:focus {
+          color: config.$color-base-inverted-dark-theme;
         }
       }
     }

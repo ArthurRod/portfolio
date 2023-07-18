@@ -9,13 +9,15 @@ interface AboutProps {
 }
 
 import "../../styles/about.scss";
+import { createParagraphArray } from "../../helpers/createParagraphArray";
+import React from "react";
 
 export function About({ about }: AboutProps) {
   const { t } = useTranslation();
   const { image } = about;
 
   const aboutText = t("aboutText");
-  const aboutTextArray = aboutText.split("\n\n");
+  const aboutTextArray = createParagraphArray(aboutText);
 
   return (
     <section
@@ -41,12 +43,15 @@ export function About({ about }: AboutProps) {
           </div>
 
           <div className="description" aria-label="Descrição">
-            {aboutTextArray.map((paragraph, index) => (
-              <>
-                <p key={index}>{paragraph}</p>
-                <br />
-              </>
-            ))}
+            {aboutTextArray.map((paragraph, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <p>{paragraph}</p>
+
+                  {index !== aboutTextArray.length - 1 && <br />}
+                </React.Fragment>
+              );
+            })}
           </div>
         </div>
       </div>

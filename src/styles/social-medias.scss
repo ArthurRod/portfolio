@@ -1,10 +1,11 @@
 @use "./config";
 
+/* Social Medias */
 .social-medias {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
   list-style: none;
 
   /* Desktop */
@@ -15,18 +16,16 @@
   .social-media {
     a {
       display: flex;
-      padding: 10px;
+      padding: 1rem;
     }
   }
 }
 
-/* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .social-medias {
-      background-color: config.$color-light-gray;
-      box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-      border-radius: 10px;
-    }
+/* Social Medias Dark Mode */
+.dark-mode {
+  .social-medias {
+    background-color: config.$color-light-gray;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+    border-radius: 1rem;
   }
 }

@@ -1,12 +1,13 @@
 @use "./config";
 
+/* Resume */
 .resume {
   position: initial;
   width: 100vw;
   display: flex;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   color: config.$color-base-dark;
   background: config.$color-gradient;
 
@@ -20,7 +21,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 30px;
+    padding-top: 3rem;
     height: 100vh;
   }
 
@@ -29,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 3rem;
 
     /* Only tablets */
     @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
@@ -39,7 +40,7 @@
     /* Desktop */
     @media screen and (min-width: config.$media-desktop-sm) {
       flex-direction: row;
-      width: 1100px;
+      width: 110rem;
     }
 
     .image-infos {
@@ -47,8 +48,8 @@
       justify-content: space-between;
       align-items: center;
       flex-direction: column;
-      gap: 30px;
-      padding: 15px;
+      gap: 3rem;
+      padding: 1.5rem;
 
       /* Desktop */
       @media screen and (min-width: config.$media-tablet-xs) {
@@ -62,24 +63,24 @@
       align-items: center;
       overflow: hidden;
       transition: all ease-in-out 0.3s;
-      border-radius: 10px;
+      border-radius: 1rem;
 
       img {
-        width: 225px;
+        width: 22.5rem;
 
         /* Mobile M */
         @media screen and (min-width: config.$media-mobile-m) and (max-width: config.$media-tablet-xs) {
-          width: 235px;
+          width: 23.5rem;
         }
 
         /* Only tablets */
         @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
-          width: 175px;
+          width: 17.5rem;
         }
 
         /* Desktop */
         @media screen and (min-width: config.$media-desktop-sm) {
-          width: 235px;
+          width: 23.5rem;
         }
       }
     }
@@ -88,24 +89,24 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 30px;
+      gap: 3rem;
       width: 100%;
-      min-height: 200px;
+      min-height: 20rem;
       transition: all ease-in-out 0.3s;
 
       /* Only tablets */
       @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
-        width: calc(100% - 215px);
+        width: calc(100% - 21.5rem);
       }
 
       /* Desktop */
       @media screen and (min-width: config.$media-desktop-sm) {
-        width: calc(100% - 290px);
-        padding: 15px;
+        width: calc(100% - 29rem);
+        padding: 1.5rem;
       }
 
       .name-position {
-        text-shadow: 2px 2px config.$color-blue-base;
+        text-shadow: 0.2rem 0.2rem config.$color-blue-base;
 
         .name h2,
         .position h3 {
@@ -138,27 +139,27 @@
 
             &::after {
               content: "|";
-              margin-left: 5px;
+              margin-left: 0.5rem;
               opacity: 1;
               animation: intervalReveal 0.7s infinite;
             }
 
             /* Mobile M */
             @media screen and (min-width: config.$media-mobile-m) {
-              min-height: 97px;
+              min-height: 9.7rem;
               font-size: 4rem;
             }
 
             /* Tablet */
             @media screen and (min-width: config.$media-tablet-xs) {
-              min-height: 121px;
+              min-height: 12.1rem;
               font-size: 5rem;
               text-align: left;
             }
 
             /* Desktop */
             @media screen and (min-width: config.$media-desktop-sm) {
-              min-height: 193px;
+              min-height: 19.3rem;
               font-size: 8rem;
             }
 
@@ -199,44 +200,42 @@
   }
 }
 
-/* Dark Mode */
-.landing-page {
-  &.dark-mode {
-    .resume {
-      color: config.$color-light-gray;
-      background: url("../assets/jpg/sunset-city.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
+/* Resume Dark Mode */
+.dark-mode {
+  .resume {
+    color: config.$color-light-gray;
+    background: url("../assets/jpg/sunset-city.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
-      .container {
-        .image-infos {
-          /* Desktop */
-          @media screen and (min-width: config.$media-desktop-sm) {
-            border-radius: 10px;
-            background-color: transparent;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-          }
+    .container {
+      .image-infos {
+        /* Desktop */
+        @media screen and (min-width: config.$media-desktop-sm) {
+          border-radius: 1rem;
+          background-color: transparent;
+          backdrop-filter: blur(0.5rem);
+          -webkit-backdrop-filter: blur(0.5rem);
+        }
+      }
+
+      .infos {
+        .name-position {
+          text-shadow: 0.2rem 0.2rem config.$color-base-inverted-dark-theme;
         }
 
-        .infos {
-          .name-position {
-            text-shadow: 2px 2px config.$color-base-inverted-dark-theme;
-          }
+        .resume-description {
+          color: config.$color-light-gray;
 
-          .resume-description {
-            color: config.$color-light-gray;
+          p {
+            a {
+              color: config.$color-light-gray;
 
-            p {
-              a {
+              &:hover,
+              &:focus {
                 color: config.$color-light-gray;
-
-                &:hover,
-                &:focus {
-                  color: config.$color-light-gray;
-                  opacity: 0.8;
-                }
+                opacity: 0.8;
               }
             }
           }

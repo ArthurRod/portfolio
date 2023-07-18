@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { createParagraphArray } from "../../helpers/createParagraphArray";
 
 interface ProjectCardProps {
   index: number;
@@ -16,19 +17,23 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const { t } = useTranslation();
   const [projectTranslatedDescription, setProjectTranslatedDescription] =
-    useState("");
+    useState<string[]>([]);
 
   useEffect(() => {
     switch (index) {
       case 0:
         const projectTranslatedDescription = t("projects.project1Description");
 
-        setProjectTranslatedDescription(projectTranslatedDescription);
+        setProjectTranslatedDescription(
+          createParagraphArray(projectTranslatedDescription)
+        );
         break;
       case 1:
         const projectTranslatedDescription2 = t("projects.project2Description");
 
-        setProjectTranslatedDescription(projectTranslatedDescription2);
+        setProjectTranslatedDescription(
+          createParagraphArray(projectTranslatedDescription2)
+        );
         break;
       default:
         break;
@@ -41,7 +46,15 @@ export default function ProjectCard({
         <img src={projectPrint} width={300} alt="Print Desktop" />
       </div>
       <div className="description" aria-label="Descrição do Projeto">
-        <p>{projectTranslatedDescription}</p>
+        {projectTranslatedDescription.map((paragraph, index) => {
+          return (
+            <React.Fragment key={index}>
+              <p>{paragraph}</p>
+
+              {index !== projectTranslatedDescription.length - 1 && <br />}
+            </React.Fragment>
+          );
+        })}
       </div>
       <div className="links" aria-label="Links do Projeto">
         <ul>
@@ -55,7 +68,7 @@ export default function ProjectCard({
             <li aria-label="Link do GitHub">
               <span>{t("gitHubLinkLabel")}</span>
               <a href={projectGithubLink} target="_blank">
-                {projectLink}
+                {projectGithubLink}
               </a>
             </li>
           )}
