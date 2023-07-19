@@ -5,7 +5,7 @@ import en from "./translations/en.json";
 import ptBR from "./translations/ptBR.json";
 
 const i18nConfig = {
-  fallbackLng: "ptBR",
+  fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },

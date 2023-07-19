@@ -13,12 +13,7 @@ export default function Projects({ projects }: ProjectsProps) {
   const { t } = useTranslation();
 
   return (
-    <section
-      id="projects"
-      className="projects"
-      aria-label="Seção Projetos"
-      data-animate="animate"
-    >
+    <section id="projects" className="projects" aria-label="Seção Projetos">
       <div className="container">
         <div
           className="section-title-inverted"

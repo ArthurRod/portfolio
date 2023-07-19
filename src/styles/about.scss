@@ -7,8 +7,7 @@
   background-color: config.$color-base;
 
   /* Desktop */
-  @media screen and (min-width: config.$media-desktop) {
-    margin-top: 100vh;
+  @media screen and (min-width: config.$media-desktop-sm) {
     box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
   }
 
@@ -18,18 +17,18 @@
     gap: 3rem;
 
     /* Desktop */
-    @media screen and (min-width: config.$media-desktop) {
+    @media screen and (min-width: config.$media-desktop-sm) {
       flex-direction: row;
       gap: 5rem;
     }
   }
 
   .image {
-    display: flex;
+    display: none;
     justify-content: center;
 
     /* Desktop */
-    @media screen and (min-width: config.$media-desktop) {
+    @media screen and (min-width: config.$media-desktop-sm) {
       display: block;
     }
   }

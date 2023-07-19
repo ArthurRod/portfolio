@@ -48,9 +48,21 @@
 /* Skills Dark Mode */
 .dark-mode {
   .skills {
-    background-color: config.$color-base-dark-theme;
-    backdrop-filter: blur(0.8rem);
-    -webkit-backdrop-filter: blur(0.8rem);
+    background: url("../assets/jpg/sunset-city.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .blur-content {
+      /* Desktop */
+      @media screen and (min-width: config.$media-desktop-sm) {
+        border-radius: 1rem;
+        padding: 1.5rem;
+        background-color: transparent;
+        backdrop-filter: blur(0.5rem);
+        -webkit-backdrop-filter: blur(0.5rem);
+      }
+    }
   }
 
   .skill-descriptions {

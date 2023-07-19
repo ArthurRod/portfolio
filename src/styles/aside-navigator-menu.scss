@@ -9,12 +9,18 @@
   position: fixed;
   z-index: 2;
   width: 100vw;
-  height: 10rem;
-  left: 0;
-  top: -11rem;
+  height: 6rem;
+  left: -100vw;
+  top: 0;
   background-color: config.$color-base;
+  overflow: hidden;
   box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
-  transition: top ease-in-out 0.3s;
+  transition: all ease-in-out 0.5s;
+
+  /* Tablet */
+  @media screen and (min-width: config.$media-tablet-xs) {
+    height: 10rem;
+  }
 
   /* Desktop */
   @media screen and (min-width: config.$media-desktop-sm) {
@@ -22,27 +28,39 @@
     flex-direction: column;
     width: 13rem;
     height: 100vh;
-    top: 0;
+    left: 0;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      width: 15rem;
+
+      nav {
+        ul {
+          li {
+            transform: translateX(0);
+
+            a {
+              span {
+                position: initial;
+                opacity: 1;
+                margin-left: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &.active {
-    top: 0;
+    left: 0;
   }
 
   .controls {
     display: flex;
     align-items: center;
-    padding: 0.5rem 0.5rem 0.5rem 0px;
-
-    /* Mobile M */
-    @media screen and (min-width: config.$media-mobile-m) {
-      padding: 1rem 1rem 1rem 0px;
-    }
-
-    /* Mobile L*/
-    @media screen and (min-width: config.$media-mobile-l) {
-      padding: 1.5rem 1.5rem 1.5rem 0px;
-    }
+    padding: 0px;
 
     /* Desktop */
     @media screen and (min-width: config.$media-desktop-sm) {
@@ -85,121 +103,80 @@
       width: 100%;
       list-style-type: none;
 
+      /* Mobile m */
+      @media screen and (min-width: config.$media-mobile-m) {
+        gap: 2rem;
+      }
+
+      /* Tablet */
+      @media screen and (min-width: config.$media-tablet-xs) {
+        gap: 3rem;
+      }
+
       /* Desktop */
       @media screen and (min-width: config.$media-desktop-sm) {
         flex-direction: column;
         justify-content: center;
-        gap: 2rem;
+        gap: 4rem;
       }
 
       li {
         display: flex;
-        justify-content: center;
         position: relative;
-        padding: 0.5rem;
-
-        /* Mobile M */
-        @media screen and (min-width: config.$media-mobile-m) {
-          padding: 1rem;
-        }
-
-        /* Mobile L*/
-        @media screen and (min-width: config.$media-mobile-l) {
-          padding: 1.5rem;
-        }
+        transition: all ease-in-out 0.5s;
 
         /* Desktop */
         @media screen and (min-width: config.$media-desktop-sm) {
-          height: 10rem;
-          width: 100%;
-          padding: 0px;
-
-          &:hover,
-          &:focus {
-            a {
-              padding-right: 3.5rem;
-
-              .menu-name {
-                opacity: 1;
-                left: calc(100% - 4.5rem);
-                transition: all ease-in-out 0.3s;
-              }
-            }
-          }
-        }
-
-        &:first-child {
-          /* Desktop */
-          @media screen and (max-width: config.$media-desktop-xs) {
-            padding: 1.5rem 1.5rem 1.5rem 0;
-          }
+          transform: translateX(3rem);
         }
 
         a {
           display: flex;
-          justify-content: center;
           align-items: center;
           gap: 1rem;
+          padding: 0.5rem;
           text-decoration: none;
-          transition: all ease-in-out 0.3s;
-          color: config.$color-light-gray;
           cursor: pointer;
+          transition: all ease-in-out 0.5s;
 
-          .menu-name {
+          /* Mobile M */
+          @media screen and (min-width: config.$media-mobile-m) {
+            padding: 1rem 0;
+          }
+
+          &:hover,
+          &:focus {
+            svg,
+            span {
+              color: config.$color-blue-base;
+            }
+          }
+
+          svg {
+            color: config.$color-light-gray;
+            transition: all ease-in-out 0.5s;
+          }
+
+          span {
             display: none;
+            color: config.$color-light-gray;
+            transition: all ease-in-out 0.5s;
+            opacity: 1;
+            position: initial;
+            margin-left: 0px;
+
+            /* Only Tablets */
+            @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
+              display: flex;
+            }
 
             /* Desktop */
-            @media screen and (min-width: config.$media-desktop-sm) {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              position: absolute;
-              left: 0;
-              top: calc(50% - 5rem);
+            @media screen and (min-width: config.$media-desktop-xs) {
               opacity: 0;
-              width: 10rem;
-              height: 10rem;
-              border-radius: 50%;
-              background-color: config.$color-base;
-              transition: all ease-in-out 0.3s;
-              box-shadow: 2.5rem 0px 2rem -2rem rgb(0 0 0 / 20%);
-
-              &::before,
-              &::after {
-                content: "";
-                width: 4rem;
-                height: 0.5rem;
-                position: absolute;
-                background-color: config.$color-base;
-              }
-
-              &::before {
-                top: -0.3rem;
-                transform: rotate(20deg);
-              }
-
-              &::after {
-                bottom: -0.3rem;
-                transform: rotate(-20deg);
-              }
-
-              .content {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 9rem;
-                height: 9rem;
-                border-radius: 50%;
-                border: 0.1rem solid config.$color-blue-base;
-                color: config.$color-base-dark;
-                background-color: config.$color-light-gray;
-                box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
-
-                span {
-                  @include config.font-title;
-                  font-size: 1.4rem;
-                }
-              }
+              position: absolute;
+              display: flex;
+              margin-left: 3rem;
+              min-width: 80px;
             }
           }
         }
@@ -223,16 +200,11 @@
       ul {
         li {
           a {
-            .menu-name {
-              background-color: config.$color-base-dark-theme;
-
-              &::before,
-              &::after {
-                background-color: config.$color-base-dark-theme;
-              }
-
-              .content {
-                border: 0.1rem solid config.$color-base-inverted-dark-theme;
+            &:hover,
+            &:focus {
+              svg,
+              span {
+                color: config.$color-base-inverted-dark-theme;
               }
             }
           }

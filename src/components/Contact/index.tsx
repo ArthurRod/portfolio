@@ -58,77 +58,74 @@ export function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="contact"
-      aria-label="Seção Contato"
-      data-animate="animate"
-    >
+    <section id="contact" className="contact" aria-label="Seção Contato">
       <div className="container">
-        <div
-          className="section-title"
-          aria-label="Título da Seção de Contato"
-          data-animate="left"
-        >
-          <h2>{t("titles.contact")}</h2>
-        </div>
-        <div className="content" data-animate="bottom">
-          <form ref={form} onSubmit={(e) => sendEmail(e)}>
-            <label>{t("contactForm.labels.name")}</label>
-            <input
-              type="text"
-              name="user_name"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-              placeholder={t("contactForm.placeholders.name")}
-              required
-            />
-            <label>E-mail *</label>
-            <input
-              type="email"
-              name="user_email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              placeholder={t("contactForm.placeholders.email")}
-              required
-            />
-            <label>{t("contactForm.labels.message")}</label>
-            <textarea
-              name="message"
-              onChange={(e) => setMessage(e.target.value)}
-              value={message}
-              placeholder={t("contactForm.placeholders.message")}
-              maxLength={300}
-              required
-            />
-            <button className="send-btn" type="submit">
-              {loading ? <Loading /> : t("contactForm.button")}
-            </button>
-          </form>
-          {error.length > 0 && (
-            <div className="error">
-              <p>{error}</p>
-              <button onClick={() => setError("")}>
-                <X size={20} color="#e2555b" />
-              </button>
-            </div>
-          )}
-          {success.length > 0 && (
-            <div className="success">
-              <p>{success}</p>
-              <button onClick={() => setSuccess("")}>
-                <X size={20} color="#4cbb17" />
-              </button>
-            </div>
-          )}
-          <span className="option">{t("contactOrLabel")}</span>
-          <a
-            className="whatsapp-btn"
-            href="https://wa.me/5531998226668"
-            target="_blank"
+        <div className="blur-content" data-animate="bottom">
+          <div
+            className="section-title"
+            aria-label="Título da Seção de Contato"
+            data-animate="left"
           >
-            <WhatsappLogo size={64} />
-          </a>
+            <h2>{t("titles.contact")}</h2>
+          </div>
+          <div className="content" data-animate="bottom">
+            <form ref={form} onSubmit={(e) => sendEmail(e)}>
+              <label>{t("contactForm.labels.name")}</label>
+              <input
+                type="text"
+                name="user_name"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                placeholder={t("contactForm.placeholders.name")}
+                required
+              />
+              <label>E-mail *</label>
+              <input
+                type="email"
+                name="user_email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                placeholder={t("contactForm.placeholders.email")}
+                required
+              />
+              <label>{t("contactForm.labels.message")}</label>
+              <textarea
+                name="message"
+                onChange={(e) => setMessage(e.target.value)}
+                value={message}
+                placeholder={t("contactForm.placeholders.message")}
+                maxLength={300}
+                required
+              />
+              <button className="send-btn" type="submit">
+                {loading ? <Loading /> : t("contactForm.button")}
+              </button>
+            </form>
+            {error.length > 0 && (
+              <div className="error">
+                <p>{error}</p>
+                <button onClick={() => setError("")}>
+                  <X size={20} color="#e2555b" />
+                </button>
+              </div>
+            )}
+            {success.length > 0 && (
+              <div className="success">
+                <p>{success}</p>
+                <button onClick={() => setSuccess("")}>
+                  <X size={20} color="#4cbb17" />
+                </button>
+              </div>
+            )}
+            <span className="option">{t("contactOrLabel")}</span>
+            <a
+              className="whatsapp-btn"
+              href="https://wa.me/5531998226668"
+              target="_blank"
+            >
+              <WhatsappLogo size={64} />
+            </a>
+          </div>
         </div>
       </div>
     </section>

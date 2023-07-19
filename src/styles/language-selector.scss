@@ -1,0 +1,49 @@
+@use "./config";
+
+/* Language selector */
+.language-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1rem;
+  position: fixed;
+  top: 7rem;
+  right: -5rem;
+  padding: 2rem;
+  background-color: transparent;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  transition: right ease-in-out 0.5s;
+
+  &:hover {
+    right: 1rem;
+  }
+
+  /* Tablet */
+  @media screen and (min-width: config.$media-tablet-xs) {
+    top: 11rem;
+  }
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop-sm) {
+    top: 3rem;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity ease-in-out 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 4rem;
+    }
+  }
+}
+
+/* Language selector Dark mode */

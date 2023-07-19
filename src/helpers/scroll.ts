@@ -1,5 +1,3 @@
-let lastScrollTop = 0;
-
 export function scrollAnimateElements() {
   const targets = document.querySelectorAll(
     "[data-animate]"
@@ -25,29 +23,27 @@ export function scrollPage(path: string) {
   }
 }
 
-export function headerShowMobile() {
+export function scrollHeaderShow() {
   const screenWidth = window.screen.width;
 
-  if (screenWidth >= 1025) return;
+  if (screenWidth >= 1100) return;
 
   const element = document.getElementById("aside-navigator-menu");
 
   if (element) {
     const actualScrollTop = window.scrollY;
 
-    if (actualScrollTop > lastScrollTop) {
+    if (actualScrollTop > 100) {
       element.classList.add("active");
     } else {
       element.classList.remove("active");
     }
-
-    lastScrollTop = actualScrollTop;
   }
 }
 
 function handleScroll() {
   scrollAnimateElements();
-  headerShowMobile();
+  scrollHeaderShow();
 }
 
 window.addEventListener("scroll", handleScroll);

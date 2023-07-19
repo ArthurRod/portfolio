@@ -1,6 +1,10 @@
 {
   "translation": {
     "shortDescription": "Engenheiro de Software formado pela Unicesumar e desenvolvedor Front-End Web. Há mais de dois anos atuando com implantação e manutenção de e-commerce VTEX IO e VTEX CMS utilizando as tecnologias React, TypeScript, JavaScript, HTML5, CSS3 e Sass pela agência <link1/> uma empresa subsidiária da <link2/>.",
+    "linkTexts": {
+      "link1": "Sirius Digital",
+      "link2": "TOTVS Leste"
+    },
     "menuTexts": {
       "resume": "Resumo",
       "about": "Sobre mim",

@@ -26,8 +26,9 @@ $media-mobile-m: 375px;
 $media-mobile-l: 410px;
 $media-tablet-xs: 600px;
 $media-tablet: 768px;
+$media-tablet-l: 980px;
 $media-desktop-xs: 1024px;
-$media-desktop-sm: 1280px;
+$media-desktop-sm: 1100px;
 $media-desktop: 1300px;
 
 @mixin font-title {

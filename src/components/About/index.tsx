@@ -20,12 +20,7 @@ export function About({ about }: AboutProps) {
   const aboutTextArray = createParagraphArray(aboutText);
 
   return (
-    <section
-      id="about"
-      className="about"
-      aria-label="Seção sobre mim"
-      data-animate="animate"
-    >
+    <section id="about" className="about" aria-label="Seção sobre mim">
       <div className="container">
         <div className="image" aria-label="Imagem" data-animate="right">
           <img src={image} alt="Imagem de perfil" width={225} loading="lazy" />

@@ -8,7 +8,11 @@ interface SwitchButtonProps {
 
 export function SwitchButton({ action }: SwitchButtonProps) {
   return (
-    <Switch.Root onCheckedChange={action} className="switch-button">
+    <Switch.Root
+      onCheckedChange={action}
+      className="switch-button"
+      tabIndex={1}
+    >
       <Switch.Thumb />
     </Switch.Root>
   );

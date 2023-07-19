@@ -50,23 +50,21 @@ body {
   }
 }
 
-input:focus,
-textarea:focus,
-button:focus,
-a:focus {
-  box-shadow: 0 0 0 0;
-  outline: 0;
-}
-
 /* Global Classes */
 .container {
   max-width: calc(100% - 3rem);
   margin: 0px auto;
   width: 100%;
 
+  /* Desktop sm*/
+  @media screen and (min-width: config.$media-desktop-sm) {
+    width: 95rem;
+    padding-left: 13rem;
+  }
+
+  /* Desktop */
   @media screen and (min-width: config.$media-desktop) {
     width: 127rem;
-    padding-left: 13rem;
   }
 }
 

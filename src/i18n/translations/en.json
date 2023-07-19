@@ -1,6 +1,10 @@
 {
   "translation": {
     "shortDescription": "Software Engineer graduated from Unicesumar and Front-End Web developer. For over two years, I have been working with the implementation and maintenance of VTEX IO and VTEX CMS e-commerce using technologies such as React, TypeScript, JavaScript, HTML5, CSS3, and Sass at <link1/>, a subsidiary company of <link2/>.",
+    "linkTexts": {
+      "link1": "Sirius Digital",
+      "link2": "TOTVS Leste"
+    },
     "menuTexts": {
       "resume": "Resume",
       "about": "About me",

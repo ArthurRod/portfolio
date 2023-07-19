@@ -1,6 +1,7 @@
-[data-animate] {
+[data-animate="top"] {
   opacity: 0;
-  transition: all ease-in-out 0.7s;
+  transform: translate3d(0px, -5rem, 0px);
+  transition: all ease-in-out 0.5s;
 
   &.animate {
     opacity: 1;
@@ -8,27 +9,35 @@
   }
 }
 
-[data-animate="animate"] {
+[data-animate="bottom"] {
   opacity: 0;
-  transition: all ease-in-out 0.1s;
+  transform: translate3d(0px, 5rem, 0px);
+  transition: all ease-in-out 0.5s;
 
   &.animate {
     opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
   }
 }
 
-[data-animate="top"] {
-  transform: translate3d(0px, -5rem, 0px);
-}
-
-[data-animate="bottom"] {
-  transform: translate3d(0px, 5rem, 0px);
-}
-
 [data-animate="left"] {
+  opacity: 0;
   transform: translate3d(-5rem, 0px, 0px);
+  transition: all ease-in-out 0.5s;
+
+  &.animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
 [data-animate="right"] {
+  opacity: 0;
   transform: translate3d(5rem, 0px, 0px);
+  transition: all ease-in-out 0.5s;
+
+  &.animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }

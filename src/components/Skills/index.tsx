@@ -69,49 +69,46 @@ export function Skills({ skills }: SkillsProps) {
   };
 
   return (
-    <section
-      id="skills"
-      className="skills"
-      aria-label="Seção Habilidades"
-      data-animate="animate"
-    >
+    <section id="skills" className="skills" aria-label="Seção Habilidades">
       <div className="container">
-        <div
-          className="section-title"
-          aria-label="Título da Seção de Habilidades"
-          data-animate="left"
-        >
-          <h2>{t("titles.skills")}</h2>
-        </div>
-        <Swiper
-          breakpoints={breakpointsConfig}
-          grabCursor={true}
-          loop={true}
-          speed={1000}
-          pagination={{ clickable: true }}
-          modules={[Autoplay, Pagination]}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          data-animate="bottom"
-        >
-          {skills.map((skill: Skill, i: number) => {
-            const { image, name, percentage } = skill;
+        <div className="blur-content" data-animate="top">
+          <div
+            className="section-title"
+            aria-label="Título da Seção de Habilidades"
+            data-animate="left"
+          >
+            <h2>{t("titles.skills")}</h2>
+          </div>
+          <Swiper
+            breakpoints={breakpointsConfig}
+            grabCursor={true}
+            loop={true}
+            speed={1000}
+            pagination={{ clickable: true }}
+            modules={[Autoplay, Pagination]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            data-animate="bottom"
+          >
+            {skills.map((skill: Skill, i: number) => {
+              const { image, name, percentage } = skill;
 
-            return (
-              <SwiperSlide key={i}>
-                <SkillCard
-                  skillImage={image}
-                  skillName={name}
-                  skillPercentage={percentage}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-        <div className="skill-descriptions" data-animate="right">
-          <ul>{skillDescriptionsLi()}</ul>
+              return (
+                <SwiperSlide key={i}>
+                  <SkillCard
+                    skillImage={image}
+                    skillName={name}
+                    skillPercentage={percentage}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+          <div className="skill-descriptions" data-animate="right">
+            <ul>{skillDescriptionsLi()}</ul>
+          </div>
         </div>
       </div>
     </section>

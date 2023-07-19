@@ -1,0 +1,39 @@
+@use "./config";
+
+/* Footer */
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 1.2rem;
+  color: config.$color-light-gray;
+  background-color: config.$color-base;
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop) {
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      a {
+        color: config.$color-light-gray;
+        transition: color ease-in-out 0.3s;
+
+        &:hover {
+          color: config.$color-blue-base;
+        }
+      }
+    }
+  }
+}
+
+/* Footer Dark Mode*/

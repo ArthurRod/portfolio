@@ -2,8 +2,6 @@
 
 /* Resume */
 .resume {
-  position: initial;
-  width: 100vw;
   display: flex;
   align-items: center;
   padding-top: 3rem;
@@ -13,15 +11,11 @@
 
   /* Tablet */
   @media screen and (min-width: config.$media-tablet) {
-    height: 75vh;
+    height: 60vh;
   }
 
   /* Desktop */
   @media screen and (min-width: config.$media-desktop-sm) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 3rem;
     height: 100vh;
   }
 
@@ -32,15 +26,9 @@
     align-items: center;
     gap: 3rem;
 
-    /* Only tablets */
-    @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
+    /* Tablet xs */
+    @media screen and (min-width: config.$media-tablet-xs) {
       flex-direction: row;
-    }
-
-    /* Desktop */
-    @media screen and (min-width: config.$media-desktop-sm) {
-      flex-direction: row;
-      width: 110rem;
     }
 
     .image-infos {
@@ -66,22 +54,7 @@
       border-radius: 1rem;
 
       img {
-        width: 22.5rem;
-
-        /* Mobile M */
-        @media screen and (min-width: config.$media-mobile-m) and (max-width: config.$media-tablet-xs) {
-          width: 23.5rem;
-        }
-
-        /* Only tablets */
-        @media screen and (min-width: config.$media-tablet-xs) and (max-width: config.$media-desktop-xs) {
-          width: 17.5rem;
-        }
-
-        /* Desktop */
-        @media screen and (min-width: config.$media-desktop-sm) {
-          width: 23.5rem;
-        }
+        width: 23.5rem;
       }
     }
 
@@ -135,6 +108,7 @@
           h1 {
             opacity: 0;
             font-size: 2.6rem;
+            line-height: 2.6rem;
             text-align: center;
 
             &::after {
@@ -148,19 +122,31 @@
             @media screen and (min-width: config.$media-mobile-m) {
               min-height: 9.7rem;
               font-size: 4rem;
+              line-height: 4rem;
             }
 
-            /* Tablet */
+            /* Tablet xs and m */
             @media screen and (min-width: config.$media-tablet-xs) {
               min-height: 12.1rem;
               font-size: 5rem;
+              line-height: 5rem;
               text-align: left;
             }
 
+            /* 800px */
+            @media screen and (min-width: config.$media-tablet-xs) {
+              min-height: 5rem;
+            }
+
+            /* Tablet l */
+            @media screen and (min-width: config.$media-tablet-l) {
+              min-height: 17.5rem;
+            }
+
             /* Desktop */
-            @media screen and (min-width: config.$media-desktop-sm) {
-              min-height: 19.3rem;
+            @media screen and (min-width: config.$media-desktop-xs) {
               font-size: 8rem;
+              line-height: 8rem;
             }
 
             @keyframes intervalReveal {

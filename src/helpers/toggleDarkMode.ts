@@ -1,12 +1,8 @@
-export function activateDarkMode() {
+export function toggleDarkMode() {
   const body = document.body;
-  const bodyContainsDarkModeClass = body.classList.contains("dark-mode");
   const darkModeState = localStorage.getItem("isDarkMode");
 
-  if (
-    bodyContainsDarkModeClass ||
-    (darkModeState && darkModeState === "true")
-  ) {
+  if (darkModeState === "true") {
     body.classList.remove("dark-mode");
     localStorage.setItem("isDarkMode", "false");
   } else {
