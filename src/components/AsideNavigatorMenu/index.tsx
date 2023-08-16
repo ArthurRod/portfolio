@@ -1,8 +1,10 @@
 import { Code, House, Moon, User, Palette, Phone } from "phosphor-react";
 import { useTranslation } from "react-i18next";
+
 import { scrollPage } from "../../helpers/scroll";
 import { toggleDarkMode } from "../../helpers/toggleDarkMode";
 import { SwitchButton } from "../../components/SwitchButton";
+
 import "../../styles/aside-navigator-menu.scss";
 
 export function AsideNavigatorMenu() {
@@ -11,6 +13,37 @@ export function AsideNavigatorMenu() {
   const handleMenuClick = (section: string) => {
     scrollPage(section);
   };
+
+  const handleMenuKeyDown = (e: React.KeyboardEvent, section: string) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      scrollPage(section);
+    }
+  };
+
+  const menuItemData = [
+    {
+      section: "resume",
+      icon: <House size={32} />,
+      textKey: "menuTexts.resume",
+    },
+    { section: "about", icon: <User size={32} />, textKey: "menuTexts.about" },
+    {
+      section: "skills",
+      icon: <Code size={32} />,
+      textKey: "menuTexts.skills",
+    },
+    {
+      section: "projects",
+      icon: <Palette size={32} />,
+      textKey: "menuTexts.projects",
+    },
+    {
+      section: "contact",
+      icon: <Phone size={32} />,
+      textKey: "menuTexts.contact",
+    },
+  ];
 
   return (
     <aside
@@ -30,66 +63,20 @@ export function AsideNavigatorMenu() {
       </div>
       <nav aria-label="Menus">
         <ul>
-          <li>
-            <a
-              onClick={() => handleMenuClick("resume")}
-              onKeyDown={() => handleMenuClick("resume")}
-              role="button"
-              tabIndex={1}
-              aria-label="Menu resumo"
-            >
-              <House size={32} />
-              <span>{t("menuTexts.resume")}</span>
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleMenuClick("about")}
-              onKeyDown={() => handleMenuClick("about")}
-              role="button"
-              tabIndex={1}
-              aria-label="Menu sobre mim"
-            >
-              <User size={32} />
-              <span>{t("menuTexts.about")}</span>
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleMenuClick("skills")}
-              onKeyDown={() => handleMenuClick("skills")}
-              role="button"
-              tabIndex={1}
-              aria-label="Menu habilidades"
-            >
-              <Code size={32} />
-              <span>{t("menuTexts.skills")}</span>
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleMenuClick("projects")}
-              onKeyDown={() => handleMenuClick("projects")}
-              role="button"
-              tabIndex={1}
-              aria-label="Menu projetos"
-            >
-              <Palette size={32} />
-              <span>{t("menuTexts.projects")}</span>
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleMenuClick("contact")}
-              onKeyDown={() => handleMenuClick("contact")}
-              role="button"
-              tabIndex={1}
-              aria-label="Menu contato"
-            >
-              <Phone size={32} />
-              <span>{t("menuTexts.contact")}</span>
-            </a>
-          </li>
+          {menuItemData.map((item, index) => (
+            <li key={index}>
+              <a
+                onClick={() => handleMenuClick(item.section)}
+                onKeyDown={(e) => handleMenuKeyDown(e, item.section)}
+                role="button"
+                tabIndex={1}
+                aria-label={`Menu ${item.section}`}
+              >
+                {item.icon}
+                <span>{t(item.textKey)}</span>
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </aside>

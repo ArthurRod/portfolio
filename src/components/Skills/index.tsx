@@ -1,3 +1,4 @@
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import { useTranslation } from "react-i18next";
@@ -43,30 +44,23 @@ export function Skills({ skills }: SkillsProps) {
     returnObjects: true,
   }) as string[];
 
-  const skillDescriptionsLi = (): JSX.Element[] => {
-    const skillDescriptionsLiArray = skillDescriptions.map(
-      (skillDescription, index) => {
-        const delimiter = "=>";
-        const name = skillDescription.slice(
-          0,
-          skillDescription.indexOf(delimiter)
-        );
-        const description = skillDescription.slice(
-          skillDescription.indexOf(delimiter),
-          skillDescription.length
-        );
+  const skillDescriptionsList = skillDescriptions.map(
+    (skillDescription, index) => {
+      const delimiterIndex = skillDescription.indexOf("=>");
+      const name = skillDescription.slice(0, delimiterIndex);
+      const description = skillDescription.slice(
+        delimiterIndex,
+        skillDescription.length
+      );
 
-        return (
-          <li key={index}>
-            <b>{name}</b>
-            <span>{description}</span>
-          </li>
-        );
-      }
-    );
-
-    return skillDescriptionsLiArray;
-  };
+      return (
+        <li key={index}>
+          <b>{name}</b>
+          <span>{description}</span>
+        </li>
+      );
+    }
+  );
 
   return (
     <section id="skills" className="skills" aria-label="Seção Habilidades">
@@ -92,22 +86,18 @@ export function Skills({ skills }: SkillsProps) {
             }}
             data-animate="bottom"
           >
-            {skills.map((skill: Skill, i: number) => {
-              const { image, name, percentage } = skill;
-
-              return (
-                <SwiperSlide key={i}>
-                  <SkillCard
-                    skillImage={image}
-                    skillName={name}
-                    skillPercentage={percentage}
-                  />
-                </SwiperSlide>
-              );
-            })}
+            {skills.map((skill: Skill, i: number) => (
+              <SwiperSlide key={i}>
+                <SkillCard
+                  skillImage={skill.image}
+                  skillName={skill.name}
+                  skillPercentage={skill.percentage}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
           <div className="skill-descriptions" data-animate="right">
-            <ul>{skillDescriptionsLi()}</ul>
+            <ul>{skillDescriptionsList}</ul>
           </div>
         </div>
       </div>

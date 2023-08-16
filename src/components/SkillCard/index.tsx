@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { ProgressBar } from "../ProgressBar";
@@ -17,10 +18,17 @@ export function SkillCard({
 
   return (
     <div className="skill-card" aria-label={`Habilidade ${skillName}`}>
-      <div className="skill-image" role="img" aria-label="Imagem da tecnologia">
+      <div
+        className="skill-image"
+        role="img"
+        aria-label={`Imagem de ${skillName}`}
+      >
         <img src={skillImage} alt={skillName} loading="lazy" />
       </div>
-      <div className="skill-name" aria-label="Nome da tecnologia">
+      <div
+        className="skill-name"
+        aria-label={`Nome da tecnologia ${skillName}`}
+      >
         <h4>{skillName}</h4>
       </div>
       <div className="progress-title" aria-label="Nível de habilidade">

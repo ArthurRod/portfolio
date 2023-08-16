@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+
 import { createParagraphArray } from "../../helpers/createParagraphArray";
 
 interface ProjectCardProps {
@@ -16,29 +17,25 @@ export default function ProjectCard({
   projectPrint,
 }: ProjectCardProps) {
   const { t } = useTranslation();
-  const [projectTranslatedDescription, setProjectTranslatedDescription] =
+  const [projectTranslatedDescriptions, setProjectTranslatedDescriptions] =
     useState<string[]>([]);
 
   useEffect(() => {
-    switch (index) {
-      case 0:
-        const projectTranslatedDescription = t("projects.project1Description");
+    const projectTranslatedDescriptionKey =
+      index === 0
+        ? "projects.project1Description"
+        : index === 1
+        ? "projects.project2Description"
+        : "";
 
-        setProjectTranslatedDescription(
-          createParagraphArray(projectTranslatedDescription)
-        );
-        break;
-      case 1:
-        const projectTranslatedDescription2 = t("projects.project2Description");
+    if (projectTranslatedDescriptionKey) {
+      const projectTranslatedDescription = t(projectTranslatedDescriptionKey);
 
-        setProjectTranslatedDescription(
-          createParagraphArray(projectTranslatedDescription2)
-        );
-        break;
-      default:
-        break;
+      setProjectTranslatedDescriptions(
+        createParagraphArray(projectTranslatedDescription)
+      );
     }
-  }, []);
+  }, [index, t]);
 
   return (
     <div className="project-card" aria-label="Projeto" data-animate="left">
@@ -46,28 +43,31 @@ export default function ProjectCard({
         <img src={projectPrint} width={300} alt="Print Desktop" />
       </div>
       <div className="description" aria-label="Descrição do Projeto">
-        {projectTranslatedDescription.map((paragraph, index) => {
-          return (
+        {projectTranslatedDescriptions.map(
+          (projectTranslatedDescription, index) => (
             <React.Fragment key={index}>
-              <p>{paragraph}</p>
-
-              {index !== projectTranslatedDescription.length - 1 && <br />}
+              <p>{projectTranslatedDescription}</p>
+              {index !== projectTranslatedDescriptions.length - 1 && <br />}
             </React.Fragment>
-          );
-        })}
+          )
+        )}
       </div>
       <div className="links" aria-label="Links do Projeto">
         <ul>
           <li aria-label="Link do Executável">
             <span>{t("projectLinkLabel")}</span>
-            <a href={projectLink} target="_blank">
+            <a href={projectLink} target="_blank" rel="noopener noreferrer">
               {projectLink}
             </a>
           </li>
           {projectGithubLink && (
             <li aria-label="Link do GitHub">
               <span>{t("gitHubLinkLabel")}</span>
-              <a href={projectGithubLink} target="_blank">
+              <a
+                href={projectGithubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {projectGithubLink}
               </a>
             </li>

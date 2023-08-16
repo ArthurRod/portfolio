@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { ResumeType } from "../../types/ResumeType";
 import { typeWritter } from "../../helpers/typeWritter";
 import { SocialMedias } from "./SocialMedias";
+import { LinkText } from "../LinkText";
 
 import "../../styles/resume.scss";
-import { LinkText } from "../LinkText";
 
 interface ResumeProps {
   resume: ResumeType;
@@ -14,6 +14,7 @@ interface ResumeProps {
 
 export function Resume({ resume }: ResumeProps) {
   const writterElementName = useRef(null!);
+  const { t } = useTranslation();
 
   const { image, name, position, socialMedias } = resume;
 
@@ -21,7 +22,7 @@ export function Resume({ resume }: ResumeProps) {
     if (writterElementName.current) {
       typeWritter(writterElementName.current);
     }
-  }, [writterElementName]);
+  }, []);
 
   return (
     <section id="resume" className="resume" aria-label="Seção Resumo">
@@ -50,6 +51,7 @@ export function Resume({ resume }: ResumeProps) {
               <p>
                 <Trans
                   i18nKey="shortDescription"
+                  t={t}
                   components={{
                     link1: (
                       <LinkText

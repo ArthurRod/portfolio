@@ -6,15 +6,18 @@ interface ProgressBarProps {
 
 export function ProgressBar({ percentage }: ProgressBarProps) {
   return (
-    <div className="progress-bar-wrapper" aria-label="Barra de Progresso">
+    <div
+      className="progress-bar-wrapper"
+      aria-label={`Barra de Progresso ${percentage}%`}
+    >
       <div
         className="progress-bar"
         role="progressbar"
-        aria-label="Progresso de conhecimento da habilidade"
+        aria-label={`Progresso de conhecimento da habilidade: ${percentage}%`}
         aria-valuenow={percentage}
         style={{ width: `${percentage}%` }}
       >
-        <label aria-label={`Progresso ${percentage}%`}>{percentage}%</label>
+        <span>{percentage}%</span>
       </div>
     </div>
   );

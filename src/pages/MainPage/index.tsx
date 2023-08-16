@@ -40,10 +40,10 @@ export function MainPage() {
   }
 
   return (
-    <>
+    <div id="main-page">
+      <AsideNavigatorMenu />
+      <LanguageSelector />
       <main id="main-page" className="main-page">
-        <AsideNavigatorMenu />
-        <LanguageSelector />
         <Resume resume={info.resume} />
         <About about={info.about} />
         <Skills skills={info.skills} />
@@ -51,6 +51,6 @@ export function MainPage() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

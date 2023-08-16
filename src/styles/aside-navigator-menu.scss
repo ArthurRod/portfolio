@@ -33,7 +33,7 @@
     &:hover,
     &:focus,
     &:focus-within {
-      width: 15rem;
+      width: 16rem;
 
       nav {
         ul {
@@ -176,7 +176,7 @@
               position: absolute;
               display: flex;
               margin-left: 3rem;
-              min-width: 80px;
+              width: 8.5rem;
             }
           }
         }

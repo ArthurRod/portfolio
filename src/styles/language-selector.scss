@@ -16,7 +16,9 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   transition: right ease-in-out 0.5s;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-within {
     right: 1rem;
   }
 

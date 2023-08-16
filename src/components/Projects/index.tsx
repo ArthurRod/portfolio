@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next";
 import { Project } from "../../types/Project";
 import ProjectCard from "../ProjectCard";
 
+import "../../styles/projects.scss";
+
 interface ProjectsProps {
   projects: Project[];
 }
-
-import "../../styles/projects.scss";
 
 export default function Projects({ projects }: ProjectsProps) {
   const { t } = useTranslation();
@@ -27,18 +27,15 @@ export default function Projects({ projects }: ProjectsProps) {
           aria-label="Descrição"
           data-animate="top"
         >
-          {projects.map((project, index) => {
-            const { link, githubLink, print } = project;
-            return (
-              <ProjectCard
-                key={index}
-                index={index}
-                projectLink={link}
-                projectGithubLink={githubLink}
-                projectPrint={print}
-              />
-            );
-          })}
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              index={index}
+              projectLink={project.link}
+              projectGithubLink={project.githubLink}
+              projectPrint={project.print}
+            />
+          ))}
         </div>
       </div>
     </section>

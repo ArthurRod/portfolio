@@ -14,7 +14,6 @@ export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -44,7 +43,6 @@ export function Contact() {
       .then(
         () => {
           setSuccess(t("contactForm.succes"));
-
           setName("");
           setEmail("");
           setMessage("");
@@ -69,7 +67,7 @@ export function Contact() {
             <h2>{t("titles.contact")}</h2>
           </div>
           <div className="content" data-animate="bottom">
-            <form ref={form} onSubmit={(e) => sendEmail(e)}>
+            <form ref={form} onSubmit={sendEmail}>
               <label>{t("contactForm.labels.name")}</label>
               <input
                 type="text"
@@ -101,6 +99,7 @@ export function Contact() {
                 {loading ? <Loading /> : t("contactForm.button")}
               </button>
             </form>
+
             {error.length > 0 && (
               <div className="error">
                 <p>{error}</p>
@@ -117,7 +116,9 @@ export function Contact() {
                 </button>
               </div>
             )}
+
             <span className="option">{t("contactOrLabel")}</span>
+
             <a
               className="whatsapp-btn"
               href="https://wa.me/5531998226668"

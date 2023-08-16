@@ -9,8 +9,9 @@ export function Footer() {
             <li>
               <a
                 href="https://www.flaticon.com/br/icones-gratis/brasil"
-                title="brasil ícones"
+                title="Brasil ícones"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Brasil ícones criados por Freepik - Flaticon
               </a>
@@ -18,10 +19,11 @@ export function Footer() {
             <li>
               <a
                 href="https://www.flaticon.com/br/icones-gratis/estados-unidos"
-                title="estados unidos ícones"
+                title="Estados Unidos ícones"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                Estados unidos ícones criados por Freepik - Flaticon
+                Estados Unidos ícones criados por Freepik - Flaticon
               </a>
             </li>
             <li>
@@ -29,6 +31,7 @@ export function Footer() {
               <a
                 href="https://pixabay.com/pt/users/artapixel-8829724/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5848267"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Artapixel
               </a>{" "}
@@ -36,6 +39,7 @@ export function Footer() {
               <a
                 href="https://pixabay.com/pt//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5848267"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Pixabay
               </a>
@@ -43,7 +47,10 @@ export function Footer() {
           </ul>
         </div>
         <div className="copy">
-          <p>&copy; 2023 Arthur Rodigues. Todos os direitos reservados.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Arthur Rodrigues. Todos os
+            direitos reservados.
+          </p>
         </div>
       </div>
     </footer>
