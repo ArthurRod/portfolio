@@ -8,7 +8,7 @@ import { LanguageSelector } from "../../components/LanguageSelector";
 import { Resume } from "../../components/Resume";
 import { About } from "../../components/About";
 import { Skills } from "../../components/Skills";
-import Projects from "../../components/Projects";
+import { ProjectsVtex } from "../../components/ProjectsVtex";
 import { Contact } from "../../components/Contact";
 import { Footer } from "../../components/Footer";
 
@@ -47,7 +47,7 @@ export function MainPage() {
         <Resume resume={info.resume} />
         <About about={info.about} />
         <Skills skills={info.skills} />
-        <Projects projects={info.projects} />
+        <ProjectsVtex projectsVtex={info.projectsVtex} />
         <Contact />
       </main>
       <Footer />

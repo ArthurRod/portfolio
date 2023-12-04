@@ -39,8 +39,8 @@
       "C++ => É uma linguagem de programação de propósito geral e de alto desempenho."
     ],
     "projects": {
-      "project1Description": "Loja de informática e acessórios para informática, esse projeto já havia sido desenvolvido anteriormente. No entanto, devido a alguns motivos, foi necessário refazê-lo. \n\n Tecnologias utilizadas: VTEX IO, React, TypeScript, Node.js e CSS",
-      "project2Description": "Loja de eletrodomésticos e móveis para casa \n\n Tecnologias utilizadas: VTEX IO, React, TypeScript, Node.js e CSS"
+      "project1Description": "Loja de informática e acessórios para informática, Este é um e-commerce desenvolvido com React, VTEX IO e TypeScript, combinando tecnologias modernas para criar uma plataforma robusta e escalável. A arquitetura, baseada em React e TypeScript, proporciona uma base sólida, enquanto a integração eficiente com a VTEX IO simplifica a gestão de produtos e pedidos. Componentes customizados em React garantem uma experiência do usuário consistente, destacando-se pela responsividade em todos os dispositivos. A implementação de recursos avançados, como personalização e recomendação, enriquece a jornada de compra. \n\n Tecnologias utilizadas: VTEX IO, React, TypeScript, Node.js e CSS",
+      "project2Description": "Loja de eletrodomésticos e móveis para casa, Assim como a N.A.V.E, este e-commerce foi concebido utilizando React, VTEX IO e TypeScript, combinando tecnologias modernas para criar uma plataforma sólida e dimensionável. \n\n Tecnologias utilizadas: VTEX IO, React, TypeScript, Node.js e CSS"
     },
     "projectLinkLabel": "Link do projeto: ",
     "gitHubLinkLabel": "Link do GitHub: ",

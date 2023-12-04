@@ -7,5 +7,5 @@ export type Info = {
   resume: ResumeType;
   about: AboutType;
   skills: Skill[];
-  projects: Project[];
+  projectsVtex: Project[];
 };

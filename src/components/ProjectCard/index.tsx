@@ -2,33 +2,37 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { createParagraphArray } from "../../helpers/createParagraphArray";
+import { Video } from "../Video";
 
 interface ProjectCardProps {
   index: number;
+  projectName: string;
   projectLink: string;
   projectGithubLink?: string;
   projectPrint: string;
+  projectVideo: string;
+  projectVideoMobile: string;
 }
 
 export default function ProjectCard({
   index,
+  projectName,
   projectLink,
   projectGithubLink,
   projectPrint,
+  projectVideo,
+  projectVideoMobile,
 }: ProjectCardProps) {
   const { t } = useTranslation();
   const [projectTranslatedDescriptions, setProjectTranslatedDescriptions] =
     useState<string[]>([]);
 
   useEffect(() => {
-    const projectTranslatedDescriptionKey =
-      index === 0
-        ? "projects.project1Description"
-        : index === 1
-        ? "projects.project2Description"
-        : "";
+    const projectTranslatedDescriptionKey = `projects.project${
+      index + 1
+    }Description`;
 
-    if (projectTranslatedDescriptionKey) {
+    if (projectTranslatedDescriptionKey.length > 0) {
       const projectTranslatedDescription = t(projectTranslatedDescriptionKey);
 
       setProjectTranslatedDescriptions(
@@ -38,11 +42,15 @@ export default function ProjectCard({
   }, [index, t]);
 
   return (
-    <div className="project-card" aria-label="Projeto" data-animate="left">
-      <div className="print" aria-label="Prints do Projeto">
-        <img src={projectPrint} width={300} alt="Print Desktop" />
-      </div>
+    <div className="project-card" aria-label="Projeto">
+      <Video path={projectVideo} poster={projectPrint} />
+
+      <Video path={projectVideoMobile} poster={projectPrint} />
+
       <div className="description" aria-label="Descrição do Projeto">
+        <div className="name">
+          <h3>{projectName}</h3>
+        </div>
         {projectTranslatedDescriptions.map(
           (projectTranslatedDescription, index) => (
             <React.Fragment key={index}>
@@ -51,28 +59,28 @@ export default function ProjectCard({
             </React.Fragment>
           )
         )}
-      </div>
-      <div className="links" aria-label="Links do Projeto">
-        <ul>
-          <li aria-label="Link do Executável">
-            <span>{t("projectLinkLabel")}</span>
-            <a href={projectLink} target="_blank" rel="noopener noreferrer">
-              {projectLink}
-            </a>
-          </li>
-          {projectGithubLink && (
-            <li aria-label="Link do GitHub">
-              <span>{t("gitHubLinkLabel")}</span>
-              <a
-                href={projectGithubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {projectGithubLink}
+        <div className="links" aria-label="Links do Projeto">
+          <ul>
+            <li aria-label="Link do Executável">
+              <span>{t("projectLinkLabel")}</span>
+              <a href={projectLink} target="_blank" rel="noopener noreferrer">
+                {projectLink}
               </a>
             </li>
-          )}
-        </ul>
+            {projectGithubLink && (
+              <li aria-label="Link do GitHub">
+                <span>{t("gitHubLinkLabel")}</span>
+                <a
+                  href={projectGithubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {projectGithubLink}
+                </a>
+              </li>
+            )}
+          </ul>
+        </div>
       </div>
     </div>
   );
