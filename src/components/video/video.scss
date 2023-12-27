@@ -1,0 +1,16 @@
+@use "../../styles/config";
+
+/* Video */
+video {
+  border-radius: 1rem;
+  width: 100%;
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop-sm) {
+    width: 41.4rem;
+  }
+
+  &:first-child {
+    width: 100%;
+  }
+}

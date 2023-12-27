@@ -55,7 +55,7 @@
         "message": "Digite a mensagem"
       },
       "genericError": "Ocorreu um erro ao enviar a mensagem!",
-      "errorFiels": "Preencha todos os campos!",
+      "errorFields": "Preencha todos os campos!",
       "succes": "Mensagem enviada!",
       "button": "Enviar"
     },

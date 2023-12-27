@@ -1,0 +1,37 @@
+@use "../../styles/config";
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 0.3rem solid config.$color-base;
+    border-top: 0.3rem solid transparent;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* Loading Dark Mode */
+.dark-mode {
+  .loading {
+    .loading-spinner {
+      border: 0.3rem solid config.$color-light-gray;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+@use "../../styles/config";
+
+/* Contact */
+.contact {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: config.$color-light-gray;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+      background-color: config.$color-base;
+
+      /* Desktop */
+      @media screen and (min-width: config.$media-desktop-sm) {
+        width: 50%;
+      }
+
+      label {
+        color: config.$color-light-gray;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      textarea {
+        height: 4rem;
+        margin-bottom: 3rem;
+        padding: 0.5rem 0.5rem 0px;
+        border-radius: 0.5rem;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border: none;
+        color: config.$color-light-gray;
+        background-color: transparent;
+        border-bottom: 0.2rem solid config.$color-light-gray;
+        transition: all ease-in-out 0.3s;
+
+        &:focus {
+          padding: 0.5rem;
+          border-color: config.$color-blue-base;
+        }
+
+        &::placeholder {
+          color: config.$color-light-gray;
+          opacity: 0.5;
+        }
+      }
+
+      textarea {
+        @include config.font-subtitle;
+        min-height: 20rem;
+      }
+
+      .send-btn {
+        height: 4rem;
+        width: 25rem;
+        border-radius: 1rem;
+        margin: 0px auto;
+        border: none;
+        text-transform: uppercase;
+        color: config.$color-base;
+        background-color: config.$color-light-gray;
+        border: 0.1rem solid transparent;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+
+        &:hover,
+        &:focus {
+          transform: scale(1.01);
+          border-color: config.$color-blue-base;
+        }
+      }
+    }
+
+    .error,
+    .success {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      border-radius: 1rem;
+
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .error {
+      border: 0.1rem solid config.$color-error;
+
+      p {
+        color: config.$color-error;
+      }
+    }
+
+    .success {
+      border: 0.1rem solid config.$color-success;
+
+      p {
+        color: config.$color-success;
+      }
+    }
+
+    .option {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: 50%;
+      margin: 3rem 0 3rem;
+      text-transform: uppercase;
+      color: config.$color-base;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 10rem;
+        height: 0.2rem;
+        background-color: config.$color-base;
+      }
+    }
+
+    .whatsapp-btn {
+      color: config.$color-base;
+      transition: color ease-in-out 0.3s;
+
+      &:hover,
+      &:focus {
+        color: config.$color-blue-base;
+      }
+    }
+  }
+}
+
+/* Contact Dark Mode */
+.dark-mode {
+  .contact {
+    background: url("../../assets/jpg/sunset-city.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .blur-content {
+      /* Desktop */
+      @media screen and (min-width: config.$media-desktop-sm) {
+        border-radius: 1rem;
+        padding: 1.5rem;
+        background-color: transparent;
+        backdrop-filter: blur(0.5rem);
+        -webkit-backdrop-filter: blur(0.5rem);
+      }
+    }
+
+    .content {
+      form {
+        background-color: config.$color-base;
+
+        input,
+        textarea {
+          &:focus {
+            border-color: config.$color-base-inverted-dark-theme;
+          }
+        }
+
+        .send-btn {
+          color: config.$color-base;
+          background-color: config.$color-light-gray;
+
+          &:hover,
+          &:focus {
+            border-color: config.$color-base-inverted-dark-theme;
+          }
+        }
+      }
+
+      .option {
+        color: config.$color-light-gray;
+
+        &::before,
+        &::after {
+          background-color: config.$color-light-gray;
+        }
+      }
+
+      .whatsapp-btn {
+        color: config.$color-light-gray;
+
+        &:hover,
+        &:focus {
+          color: config.$color-base-inverted-dark-theme;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use "../../styles/config";
+
+/* Projects */
+.projects {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: config.$color-base;
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop) {
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+  }
+
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+}
+
+/* Projects Dark Mode */
+.dark-mode {
+  .projects {
+    background-color: config.$color-base;
+
+    .projects-wrapper {
+      .project-card {
+        .links {
+          a {
+            &:hover,
+            &:focus {
+              color: config.$color-base-inverted-dark-theme;
+            }
+          }
+        }
+      }
+    }
+  }
+}

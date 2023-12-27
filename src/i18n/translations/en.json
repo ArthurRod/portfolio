@@ -55,7 +55,7 @@
         "message": "Enter your message"
       },
       "genericError": "An error occurred while sending the message!",
-      "errorFiels": "Please fill in all the fields!",
+      "errorFields": "Please fill in all the fields!",
       "succes": "Message sent!",
       "button": "Send"
     },

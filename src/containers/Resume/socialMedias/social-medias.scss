@@ -1,0 +1,31 @@
+@use "../../../styles/config";
+
+/* Social Medias */
+.social-medias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-tablet-xs) {
+    justify-content: flex-start;
+  }
+
+  .social-media {
+    a {
+      display: flex;
+      padding: 1rem;
+    }
+  }
+}
+
+/* Social Medias Dark Mode */
+.dark-mode {
+  .social-medias {
+    background-color: config.$color-light-gray;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+    border-radius: 1rem;
+  }
+}
