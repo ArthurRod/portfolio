@@ -31,12 +31,6 @@
       flex-direction: column;
       gap: 1rem;
       list-style-type: none;
-      margin-left: 20px;
-
-      /* Desktop */
-      @media screen and (min-width: config.$media-desktop) {
-        margin-left: 0px;
-      }
 
       li {
         text-align: center;
