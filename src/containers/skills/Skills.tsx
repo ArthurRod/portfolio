@@ -44,24 +44,6 @@ export function Skills({ skills }: SkillsProps) {
     returnObjects: true,
   }) as string[];
 
-  const skillDescriptionsList = skillDescriptions.map(
-    (skillDescription, index) => {
-      const delimiterIndex = skillDescription.indexOf("=>");
-      const name = skillDescription.slice(0, delimiterIndex);
-      const description = skillDescription.slice(
-        delimiterIndex,
-        skillDescription.length
-      );
-
-      return (
-        <li key={index}>
-          <b>{name}</b>
-          <span>{description}</span>
-        </li>
-      );
-    }
-  );
-
   return (
     <section id="skills" className="skills" aria-label="Seção Habilidades">
       <div className="container">
@@ -97,7 +79,11 @@ export function Skills({ skills }: SkillsProps) {
             ))}
           </Swiper>
           <div className="skill-descriptions" data-animate="right">
-            <ul>{skillDescriptionsList}</ul>
+            <ul>
+              {skillDescriptions.map((skillDescription, index) => (
+                <li key={index}>{skillDescription}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

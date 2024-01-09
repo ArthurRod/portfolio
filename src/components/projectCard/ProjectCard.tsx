@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { createParagraphArray } from "../../helpers/createParagraphArray";
 
 import { Video } from "../../components";
 
@@ -27,41 +24,19 @@ export function ProjectCard({
   projectVideoMobile,
 }: ProjectCardProps) {
   const { t } = useTranslation();
-  const [projectTranslatedDescriptions, setProjectTranslatedDescriptions] =
-    useState<string[]>([]);
-
-  useEffect(() => {
-    const projectTranslatedDescriptionKey = `projects.project${
-      index + 1
-    }Description`;
-
-    if (projectTranslatedDescriptionKey.length > 0) {
-      const projectTranslatedDescription = t(projectTranslatedDescriptionKey);
-
-      setProjectTranslatedDescriptions(
-        createParagraphArray(projectTranslatedDescription)
-      );
-    }
-  }, [index, t]);
+  const projectTranslatedDescription = t(
+    `projects.project${index + 1}Description`
+  );
 
   return (
     <div className="project-card" aria-label="Projeto">
-      <Video path={projectVideo} poster={projectPrint} />
-
-      <Video path={projectVideoMobile} poster={projectPrint} />
-
       <div className="description" aria-label="Descrição do Projeto">
         <div className="name">
           <h3>{projectName}</h3>
         </div>
-        {projectTranslatedDescriptions.map(
-          (projectTranslatedDescription, index) => (
-            <React.Fragment key={index}>
-              <p>{projectTranslatedDescription}</p>
-              {index !== projectTranslatedDescriptions.length - 1 && <br />}
-            </React.Fragment>
-          )
-        )}
+
+        <p>{projectTranslatedDescription}</p>
+
         <div className="links" aria-label="Links do Projeto">
           <ul>
             <li aria-label="Link do Executável">
@@ -85,6 +60,10 @@ export function ProjectCard({
           </ul>
         </div>
       </div>
+
+      <Video path={projectVideoMobile} poster={projectPrint} />
+
+      <Video path={projectVideo} poster={projectPrint} />
     </div>
   );
 }

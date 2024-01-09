@@ -1,0 +1,12 @@
+@use "../../styles/config";
+
+/* Switch button Dark Mode */
+.dark-mode {
+  .switch-button {
+    background-color: config.$color-base-inverted-dark-theme;
+
+    span {
+      background-color: config.$color-base-dark-theme;
+    }
+  }
+}

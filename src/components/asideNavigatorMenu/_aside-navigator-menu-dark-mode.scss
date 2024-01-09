@@ -1,0 +1,30 @@
+@use "../../styles/config";
+
+/* Aside Navigator Menu Dark Mode */
+.dark-mode {
+  .aside-navigator-menu {
+    background-color: config.$color-base-dark-theme;
+
+    .controls {
+      .dark-mode-switch-button {
+        color: config.$color-base-inverted-dark-theme;
+      }
+    }
+
+    nav {
+      ul {
+        li {
+          a {
+            &:hover,
+            &:focus {
+              svg,
+              span {
+                color: config.$color-base-inverted-dark-theme;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

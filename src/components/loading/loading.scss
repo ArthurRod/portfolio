@@ -1,5 +1,7 @@
 @use "../../styles/config";
 
+@use "./loading-dark-mode";
+
 /* Loading */
 .loading {
   display: flex;
@@ -23,15 +25,6 @@
     }
     100% {
       transform: rotate(360deg);
-    }
-  }
-}
-
-/* Loading Dark Mode */
-.dark-mode {
-  .loading {
-    .loading-spinner {
-      border: 0.3rem solid config.$color-light-gray;
     }
   }
 }

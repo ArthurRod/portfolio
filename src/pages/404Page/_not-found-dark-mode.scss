@@ -1,0 +1,15 @@
+@use "../../styles/config";
+
+/* Not Found Dark Mode */
+.dark-mode {
+  .not-found {
+    p {
+      color: config.$color-light-gray;
+    }
+
+    .btn.back-home-btn {
+      color: config.$color-base;
+      background-color: config.$color-light-gray;
+    }
+  }
+}

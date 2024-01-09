@@ -1,0 +1,13 @@
+@use "../../styles/config";
+
+/* Not Infos */
+.not-infos {
+  height: 100vh;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}

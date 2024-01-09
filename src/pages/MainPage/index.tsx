@@ -4,34 +4,69 @@ import { Info } from "../../types/Info";
 import { scrollAnimateElements } from "../../helpers/scroll";
 import { toggleDarkMode } from "../../helpers/toggleDarkMode";
 
-import { AsideNavigatorMenu, LanguageSelector, Footer } from "../../components";
-import { Resume, About, Skills, ProjectsVtex, Contact } from "../../containers";
+import {
+  AsideNavigatorMenu,
+  LanguageSelector,
+  Footer,
+  Loading,
+} from "../../components";
+import {
+  Resume,
+  About,
+  Skills,
+  ProjectsVtex,
+  Contact,
+  NotInfos,
+} from "../../containers";
 
 export function MainPage() {
-  const [info, setInfo] = useState<Info | null>(null);
+  const [infos, setInfos] = useState<Info | null>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getInfo();
+    getInfos();
     scrollAnimateElements();
     toggleDarkMode();
   }, []);
 
-  async function getInfo() {
+  async function getInfos() {
     try {
-      const response = await fetch("./src/data/infos.json", {
-        headers: {
-          Accept: "application/json",
-        },
-      });
+      setLoading(true);
+      const response = await fetch("./src/data/infos.json");
       const data = await response.json();
-      setInfo(data);
+
+      setInfos(data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
 
-  if (!info) {
-    return null;
+  if (loading) {
+    return (
+      <>
+        <AsideNavigatorMenu />
+        <main className="main-page">
+          <div className="center-total">
+            <Loading />
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (!infos) {
+    return (
+      <>
+        <AsideNavigatorMenu />
+        <main className="main-page">
+          <NotInfos />
+        </main>
+        <Footer />
+      </>
+    );
   }
 
   return (
@@ -39,10 +74,10 @@ export function MainPage() {
       <AsideNavigatorMenu />
       <main className="main-page">
         <LanguageSelector />
-        <Resume resume={info.resume} />
-        <About about={info.about} />
-        <Skills skills={info.skills} />
-        <ProjectsVtex projectsVtex={info.projectsVtex} />
+        <Resume resume={infos.resume} />
+        <About about={infos.about} />
+        <Skills skills={infos.skills} />
+        <ProjectsVtex projectsVtex={infos.projectsVtex} />
         <Contact />
       </main>
       <Footer />

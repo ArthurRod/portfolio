@@ -95,7 +95,7 @@ export function Contact() {
                 maxLength={300}
                 required
               />
-              <button className="send-btn" type="submit">
+              <button className="btn send-btn" type="submit">
                 {loading ? <Loading /> : t("contactForm.button")}
               </button>
             </form>

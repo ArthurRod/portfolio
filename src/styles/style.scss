@@ -51,6 +51,15 @@ body {
 }
 
 /* Global Classes */
+.main-page {
+  transition: all ease-in-out 0.3s;
+
+  /* Desktop */
+  @media screen and (min-width: config.$media-desktop-sm) {
+    margin-top: 0px;
+  }
+}
+
 .container {
   max-width: calc(100% - 3rem);
   margin: 0px auto;
@@ -68,13 +77,11 @@ body {
   }
 }
 
-.main-page {
-  transition: all ease-in-out 0.3s;
-
-  /* Desktop */
-  @media screen and (min-width: config.$media-desktop-sm) {
-    margin-top: 0px;
-  }
+.center-total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .section-title {
@@ -109,11 +116,45 @@ body {
   }
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 25rem;
+  border-radius: 1rem;
+  margin: 0px auto;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: config.$color-base;
+  background-color: config.$color-light-gray;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.01);
+    border-color: config.$color-blue-base;
+  }
+}
+
 /* Global Classes Dark Mode*/
 .dark-mode {
   .section-title {
     h2 {
       color: config.$color-light-gray;
+    }
+  }
+
+  .btn {
+    color: config.$color-base;
+    background-color: config.$color-light-gray;
+
+    &:hover,
+    &:focus {
+      border-color: config.$color-base-inverted-dark-theme;
     }
   }
 }

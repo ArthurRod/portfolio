@@ -1,5 +1,7 @@
 @use "../../styles/config";
 
+@use "./about-dark-mode";
+
 /* About */
 .about {
   padding-top: 3rem;
@@ -36,15 +38,15 @@
   .description-wrapper {
     .description {
       p {
+        text-align: center;
+        white-space: break-spaces;
         color: config.$color-light-gray;
+
+        /* Desktop */
+        @media screen and (min-width: config.$media-desktop-sm) {
+          text-align: left;
+        }
       }
     }
-  }
-}
-
-/* About Dark Mode */
-.dark-mode {
-  .about {
-    background-color: config.$color-base;
   }
 }

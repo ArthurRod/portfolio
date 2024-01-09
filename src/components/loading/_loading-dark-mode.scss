@@ -1,0 +1,11 @@
+@use "../../styles/config";
+
+/* Loading Dark Mode */
+.dark-mode {
+  .loading {
+    .loading-spinner {
+      border: 0.3rem solid config.$color-light-gray;
+      border-top: 0.3rem solid transparent;
+    }
+  }
+}

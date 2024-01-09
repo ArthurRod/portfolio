@@ -1,5 +1,7 @@
 @use "../../styles/config";
 
+@use "./projects-dark-mode";
+
 /* Projects */
 .projects {
   padding-top: 3rem;
@@ -15,25 +17,5 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6rem;
-  }
-}
-
-/* Projects Dark Mode */
-.dark-mode {
-  .projects {
-    background-color: config.$color-base;
-
-    .projects-wrapper {
-      .project-card {
-        .links {
-          a {
-            &:hover,
-            &:focus {
-              color: config.$color-base-inverted-dark-theme;
-            }
-          }
-        }
-      }
-    }
   }
 }

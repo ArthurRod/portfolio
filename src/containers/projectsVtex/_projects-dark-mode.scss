@@ -1,0 +1,21 @@
+@use "../../styles/config";
+
+/* Projects Dark Mode */
+.dark-mode {
+  .projects {
+    background-color: config.$color-base;
+
+    .projects-wrapper {
+      .project-card {
+        .links {
+          a {
+            &:hover,
+            &:focus {
+              color: config.$color-base-inverted-dark-theme;
+            }
+          }
+        }
+      }
+    }
+  }
+}

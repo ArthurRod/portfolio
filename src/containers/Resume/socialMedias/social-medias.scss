@@ -1,5 +1,7 @@
 @use "../../../styles/config";
 
+@use "./social-medias-dark-mode";
+
 /* Social Medias */
 .social-medias {
   display: flex;
@@ -18,14 +20,5 @@
       display: flex;
       padding: 1rem;
     }
-  }
-}
-
-/* Social Medias Dark Mode */
-.dark-mode {
-  .social-medias {
-    background-color: config.$color-light-gray;
-    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
-    border-radius: 1rem;
   }
 }

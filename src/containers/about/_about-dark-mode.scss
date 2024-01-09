@@ -1,0 +1,8 @@
+@use "../../styles/config";
+
+/* About Dark Mode */
+.dark-mode {
+  .about {
+    background-color: config.$color-base;
+  }
+}

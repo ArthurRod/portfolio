@@ -1,5 +1,7 @@
 @use "../../styles/config";
 
+@use "./resume-dark-mode";
+
 /* Resume */
 .resume {
   display: flex;
@@ -178,51 +180,6 @@
             &:hover,
             &:focus {
               color: config.$color-light-base;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Resume Dark Mode */
-.dark-mode {
-  .resume {
-    color: config.$color-light-gray;
-    background: url("../../assets/jpg/sunset-city.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-
-    .container {
-      .image-infos {
-        /* Desktop */
-        @media screen and (min-width: config.$media-desktop-sm) {
-          border-radius: 1rem;
-          background-color: transparent;
-          backdrop-filter: blur(0.5rem);
-          -webkit-backdrop-filter: blur(0.5rem);
-        }
-      }
-
-      .infos {
-        .name-position {
-          text-shadow: 0.2rem 0.2rem config.$color-base-inverted-dark-theme;
-        }
-
-        .resume-description {
-          color: config.$color-light-gray;
-
-          p {
-            a {
-              color: config.$color-light-gray;
-
-              &:hover,
-              &:focus {
-                color: config.$color-light-gray;
-                opacity: 0.8;
-              }
             }
           }
         }

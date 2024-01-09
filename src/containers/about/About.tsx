@@ -1,8 +1,6 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { AboutType } from "../../types/AboutType";
-import { createParagraphArray } from "../../helpers/createParagraphArray";
 
 import "./about.scss";
 
@@ -14,7 +12,6 @@ export function About({ about }: AboutProps) {
   const { t } = useTranslation();
   const { image } = about;
   const aboutText = t("aboutText");
-  const aboutTexts = createParagraphArray(aboutText);
 
   return (
     <section id="about" className="about" aria-label="Seção sobre mim">
@@ -35,12 +32,7 @@ export function About({ about }: AboutProps) {
           </div>
 
           <div className="description" aria-label="Descrição">
-            {aboutTexts.map((text, index) => (
-              <React.Fragment key={index}>
-                <p>{text}</p>
-                {index !== aboutTexts.length - 1 && <br />}
-              </React.Fragment>
-            ))}
+            <p>{aboutText}</p>
           </div>
         </div>
       </div>

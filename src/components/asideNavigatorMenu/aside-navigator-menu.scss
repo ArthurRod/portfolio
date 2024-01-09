@@ -1,5 +1,7 @@
 @use "../../styles/config";
 
+@use "./aside-navigator-menu-dark-mode";
+
 /* Aside Navigator Menu */
 .aside-navigator-menu {
   display: flex;
@@ -177,35 +179,6 @@
               display: flex;
               margin-left: 3rem;
               width: 8.5rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Aside Navigator Menu Dark Mode */
-.dark-mode {
-  .aside-navigator-menu {
-    background-color: config.$color-base-dark-theme;
-
-    .controls {
-      .dark-mode-switch-button {
-        color: config.$color-base-inverted-dark-theme;
-      }
-    }
-
-    nav {
-      ul {
-        li {
-          a {
-            &:hover,
-            &:focus {
-              svg,
-              span {
-                color: config.$color-base-inverted-dark-theme;
-              }
             }
           }
         }
